@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Unilever QRIS</title>
+    <!-- Favicons -->
+    <link href="dist/img/favicon.ico" rel="icon">
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+    <!-- daterange picker -->
+    <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+    <!-- Tempusdominus Bootstrap 4 -->
+    <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+    <!-- Select2 -->
+    <link rel="stylesheet" href="plugins/select2/css/select2.min.css">
+    <link rel="stylesheet" href="plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="dist/css/style.css">
+</head>
+<body class="hold-transition login-page">
+    <div class="justify-content-center mt-5">
+        <div class="login-logo">
+            <a href=""><b>Unilever</b> QRIS</a>
+        </div>
+        <!-- /.login-logo -->
+        <p>This page is for demonstration purposes only.</p>
+        <div class="info-box pointer" onclick="location.href='Role-Vendor/index.html';">
+            <span class="info-box-icon bg-info"><i class="far fa-user"></i></span>
+
+            <div class="info-box-content">
+                <span class="info-box-text">Login as</span>
+                <span class="info-box-number">VENDOR</span>
+            </div>
+        </div>
+        <div class="info-box pointer" onclick="location.href='Role-Logistic/index.html';">
+            <span class="info-box-icon bg-info"><i class="far fa-user"></i></span>
+
+            <div class="info-box-content">
+                <span class="info-box-text">Login as</span>
+                <span class="info-box-number">LOGISTIC</span>
+            </div>
+        </div>
+        <div class="info-box pointer" onclick="location.href='Role-CoupaAdmin/index.html';">
+            <span class="info-box-icon bg-info"><i class="far fa-user"></i></span>
+
+            <div class="info-box-content">
+                <span class="info-box-text">Login as</span>
+                <span class="info-box-number">COUPA ADMIN</span>
+            </div>
+        </div>
+        <div class="info-box pointer" onclick="location.href='Role-Admin/index.html';">
+            <span class="info-box-icon bg-info"><i class="far fa-user"></i></span>
+
+            <div class="info-box-content">
+                <span class="info-box-text">Login as</span>
+                <span class="info-box-number">ADMINISTRATOR</span>
+            </div>
+        </div>
+        <div class="info-box pointer" onclick="location.href='Role-SCF/index.html';">
+            <span class="info-box-icon bg-info"><i class="far fa-user"></i></span>
+
+            <div class="info-box-content">
+                <span class="info-box-text">Login as</span>
+                <span class="info-box-number">SCF</span>
+            </div>
+        </div>
+    </div>
+    <!-- /.login-box -->
+    <!-- jQuery -->
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Select2 -->
+    <script src="plugins/select2/js/select2.full.min.js"></script>
+    <!-- InputMask -->
+    <script src="plugins/moment/moment.min.js"></script>
+    <script src="plugins/inputmask/jquery.inputmask.min.js"></script>
+    <!-- date-range-picker -->
+    <script src="plugins/daterangepicker/daterangepicker.js"></script>
+    <!-- Tempusdominus Bootstrap 4 -->
+    <script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+    <!-- Easy Number Separator -->
+    <script src="plugins/easy-number-separator/easy-number-separator.js"></script>
+    <!-- AdminLTE App -->
+    <script src="dist/js/script.js"></script>
+    <!-- Page specific script -->
+    <script>
+        $(function () {
+            //Initialize Select2 Elements
+            $('.select2').select2()
+
+            //Initialize Select2 Elements
+            $('.select2bs4').select2({
+                theme: 'bootstrap4'
+            })
+
+            //Date picker
+            $('#effectivedate').datetimepicker({
+                format: 'L'
+            });
+        })
+        easyNumberSeparator({
+            selector: '.number-separator',
+            separator: '.',
+            decimalSeparator: ',',
+        })
+    </script>
+</body>
+</html>
