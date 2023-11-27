@@ -27,7 +27,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Theme style -->
     <link rel="stylesheet" href="../dist/css/style.css">
 </head>
-<body class="hold-transition sidebar-mini layout-navbar-fixed layout-fixed sidebar-collapse">
+<body class="hold-transition sidebar-mini layout-navbar-fixed layout-fixed">
     <div class="wrapper">
 
         <!-- Navbar -->
@@ -92,7 +92,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                         <li class="nav-header">MAIN MENU</li>
                         <li class="nav-item">
-                            <a href="index.html" class="nav-link active">
+                            <a href="index.html" class="nav-link">
                                 <i class="nav-icon fas fa-home"></i>
                                 <p>Home</p>
                             </a>
@@ -111,7 +111,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </li>
                         <li class="nav-header">MASTER DATA</li>
                         <li class="nav-item">
-                            <a href="vendors.html" class="nav-link">
+                            <a href="vendors.html" class="nav-link active">
                                 <i class="nav-icon fas fa-store"></i>
                                 <p>Vendors</p>
                             </a>
@@ -129,7 +129,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="po-tracking.html" class="nav-link active">
+                            <a href="po-tracking.html" class="nav-link">
                                 <i class="fas fa-search nav-icon"></i>
                                 <p>PO Tracking</p>
                             </a>
@@ -154,11 +154,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0">Home</h1>
+                            <h1 class="m-0">Vendors</h1>
                         </div><!-- /.col -->
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                <li class="breadcrumb-item active">Vendors</li>
                             </ol>
                         </div><!-- /.col -->
                     </div><!-- /.row -->
@@ -169,41 +170,47 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <div class="content">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-12">
-                            <div class="card card-primary card-tabs">
-                                <div class="card-header p-0 pt-1">
-                                    <ul class="nav nav-tabs">
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="index.html">OPEN QUOTATION DASHBOARD</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link active" href="home-invoice.html">OPEN INVOICE DASHBOARD</a>
-                                        </li>
-                                    </ul>
-                                </div>
-
+                        <!-- left column -->
+                        <div class="col-md-12">
+                            <div class="card">
+                                <!-- form start -->
                                 <div class="card-body">
-                                    <a href="create-invoice.html" class="btn btn-success float-right">
-                                        <i class="fa fa-plus mr-2"></i>Create New Invoice
-                                    </a>
-                                    <div class="row">
-                                        <div class="col-md-2">
-                                            <div class="form-group">
-                                                <input class="form-control" placeholder="Ticket Number" />
+                                    <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target=".modal-add-vendor">
+                                        <i class="fa fa-plus mr-2"></i>Add New Vendor
+                                    </button>
+
+                                    <div class="modal fade modal-add-vendor" tabindex="-1" role="dialog" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title">Add New Vendor</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="form-group">
+                                                        <label>Vendor Name</label>
+                                                        <input type="text" class="form-control" />
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>Area</label>
+                                                        <select class="form-control">
+                                                            <option id="opt" selected disabled>Please select</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                                    <a href="" type="button" class="btn btn-primary">Save Vendor</a>
+                                                </div>
                                             </div>
                                         </div>
+                                    </div>
+                                    <div class="row">
                                         <div class="col-md-3">
                                             <div class="form-group">
-                                                <select class="form-control">
-                                                    <option>All Vendor</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <div class="form-group">
-                                                <select class="form-control">
-                                                    <option>All Period</option>
-                                                </select>
+                                                <input class="form-control" placeholder="Search">
                                             </div>
                                         </div>
                                         <div class="col-md-3">
@@ -216,79 +223,99 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                         </div>
                                     </div>
                                     <div class="table-responsive">
-                                        <table class="table text-wrap">
-                                            <thead class="bg-primary">
+                                        <table class="table table-hover">
+                                            <thead class="bg-light">
                                                 <tr>
-                                                    <th width="100">No. Ticket</th>
-                                                    <th>Vendor Name & Code</th>
-                                                    <th>Transaction</th>
-                                                    <th width="100">Period</th>
-                                                    <th>Amount (IDR)</th>
-                                                    <th>Remarks</th>
-                                                    <th>Submitted Time</th>
-                                                    <th>Current Status</th>
-                                                    <th>Time Stamp</th>
-                                                    <th width="150">Time to Due Date (Aging Period)</th>
+                                                    <th>Vendor</th>
+                                                    <th>Area</th>
+                                                    <th width="175">Action</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr class="bg-default-danger">
+                                                <tr>
+                                                    <td>Linfox</td>
+                                                    <td>Jawa</td>
                                                     <td>
-                                                        <a href="detail-invoice-update-warehouse.html">
-                                                            <b>TCK123</b><i class="fa fa-search text-sm ml-2"></i>
+                                                        <button type="button" class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target=".modal-edit-vendor">
+                                                            <i class="fa fa-pen mr-2"></i>Edit
+                                                        </button>
+
+                                                        <a href="vendors-po-list.html" class="btn btn-outline-primary btn-sm">
+                                                            <i class="fa fa-search mr-2"></i>PO List
                                                         </a>
+                                                        <div class="modal fade modal-edit-vendor" tabindex="-1" role="dialog" aria-hidden="true">
+                                                            <div class="modal-dialog">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <h5 class="modal-title">Edit Vendor's Data</h5>
+                                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                            <span aria-hidden="true">&times;</span>
+                                                                        </button>
+                                                                    </div>
+                                                                    <div class="modal-body">
+                                                                        <div class="form-group">
+                                                                            <label>Vendor Name</label>
+                                                                            <input type="text" class="form-control" value="Linfox" />
+                                                                        </div>
+                                                                        <div class="form-group">
+                                                                            <label>Area</label>
+                                                                            <select class="form-control">
+                                                                                <option disabled>Please select</option>
+                                                                                <option selected>Jawa</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                                                        <a href="" type="button" class="btn btn-primary">Save Changes</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                     </td>
-                                                    <td>
-                                                        <b>Linfox</b><br />
-                                                        VDR12345
-                                                    </td>
-                                                    <td>Additional MHE</td>
-                                                    <td>Jan 2023 - Mar 2023</td>
-                                                    <td>10.000.000</td>
-                                                    <td>MHE Additional for Festive</td>
-                                                    <td>18/09/2023 11:25</td>
-                                                    <td>Open Ticket</td>
-                                                    <td>18/09/2023 13:00</td>
-                                                    <td>1 Days</td>
                                                 </tr>
-                                                <tr class="bg-default-warning">
+                                                <tr>
+                                                    <td>MIC Enterprise</td>
+                                                    <td>Jawa</td>
                                                     <td>
-                                                        <a href="detail-invoice-update-transport.html">
-                                                            <b>TCK123</b><i class="fa fa-search text-sm ml-2"></i>
+                                                        <button type="button" class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target=".modal-edit-vendor">
+                                                            <i class="fa fa-pen mr-2"></i>Edit
+                                                        </button>
+                                                        <a href="vendors-po-list.html" class="btn btn-outline-primary btn-sm">
+                                                            <i class="fa fa-search mr-2"></i>PO List
                                                         </a>
+                                                        <div class="modal fade modal-edit-vendor" tabindex="-1" role="dialog" aria-hidden="true">
+                                                            <div class="modal-dialog">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <h5 class="modal-title">Edit Vendor Data</h5>
+                                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                            <span aria-hidden="true">&times;</span>
+                                                                        </button>
+                                                                    </div>
+                                                                    <div class="modal-body">
+                                                                        <div class="form-group">
+                                                                            <label>Vendor Name</label>
+                                                                            <input type="text" class="form-control" value="MIC Enterprise" />
+                                                                        </div>
+                                                                        <div class="form-group">
+                                                                            <label>Area</label>d
+                                                                            <select class="form-control">
+                                                                                <option disabled>Please select</option>
+                                                                                <option selected>Jawa</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                                                        <a href="" type="button" class="btn btn-primary">Save Changes</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                     </td>
-                                                    <td>
-                                                        <b>Linfox</b><br />
-                                                        VDR12345
-                                                    </td>
-                                                    <td>Additional MHE</td>
-                                                    <td>Jan 2023 - Mar 2023</td>
-                                                    <td>10.000.000</td>
-                                                    <td>MHE Additional for Festive</td>
-                                                    <td>18/09/2023 11:25</td>
-                                                    <td>Waiting for PO input</td>
-                                                    <td>18/09/2023 13:00</td>
-                                                    <td>2 Days</td>
                                                 </tr>
-                                                <tr class="bg-default-success">
-                                                    <td>
-                                                        <a href="detail-invoice.html">
-                                                            <b>TCK123</b><i class="fa fa-search text-sm ml-2"></i>
-                                                        </a>
-                                                    </td>
-                                                    <td>
-                                                        <b>Linfox</b><br />
-                                                        VDR12345
-                                                    </td>
-                                                    <td>Additional MHE</td>
-                                                    <td>Jan 2023 - Mar 2023</td>
-                                                    <td>10.000.000</td>
-                                                    <td>MHE Additional for Festive</td>
-                                                    <td>18/09/2023 11:25</td>
-                                                    <td>Active budget checking</td>
-                                                    <td>18/09/2023 13:00</td>
-                                                    <td>3 Days</td>
-                                                </tr>
+
                                             </tbody>
                                         </table>
                                     </div>
@@ -300,9 +327,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                         <li class="page-item"><a class="page-link" href="#">»</a></li>
                                     </ul>
                                 </div>
+                                <!-- /.card-body -->
 
-                                <!-- /.card -->
                             </div>
+
                         </div>
                     </div>
                 </div><!-- /.container-fluid -->

@@ -27,7 +27,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Theme style -->
     <link rel="stylesheet" href="../dist/css/style.css">
 </head>
-<body class="hold-transition sidebar-mini layout-navbar-fixed layout-fixed sidebar-collapse">
+<body class="hold-transition sidebar-mini layout-navbar-fixed layout-fixed">
     <div class="wrapper">
 
         <!-- Navbar -->
@@ -92,7 +92,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                         <li class="nav-header">MAIN MENU</li>
                         <li class="nav-item">
-                            <a href="index.html" class="nav-link active">
+                            <a href="index.html" class="nav-link">
                                 <i class="nav-icon fas fa-home"></i>
                                 <p>Home</p>
                             </a>
@@ -154,16 +154,17 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <a href="javascript:history.back()" class="btn btn-default btn-sm">
+                            <a href="po-tracking-detail.html" class="btn btn-default btn-sm">
                                 <i class="fa fa-angle-left mr-2"></i>Back to Previous
                             </a>
-                            <div class="h4 page-header-btn">| Create New Quotation</div>
+                            <div class="h4 page-header-btn">| Transactions Details</div>
                         </div><!-- /.col -->
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                <li class="breadcrumb-item"><a href="index.html">Open Quotation Dashboard</a></li>
-                                <li class="breadcrumb-item active">Create New Quotation</li>
+                                <li class="breadcrumb-item"><a href="po-tracking.html">PO Tracking</a></li>
+                                <li class="breadcrumb-item"><a href="po-tracking-detail.html">PO Details</a></li>
+                                <li class="breadcrumb-item active">Transactions Details</li>
                             </ol>
                         </div><!-- /.col -->
                     </div><!-- /.row -->
@@ -174,65 +175,136 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <div class="content">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-12">
+                        <!-- left column -->
+                        <div class="col-md-12">
                             <div class="card card-primary">
                                 <div class="card-header">
-                                    <h3 class="card-title">PR Request</h3>
+                                    <h3 class="card-title">Transaction: Additional MHE</h3>
                                 </div>
-                                <!-- /.card-header -->
-                                <!-- form start -->
-                                <form>
-                                    <div class="card-body">
-                                        <div class="alert alert-light alert-dismissible text-sm">
-                                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                                            <i class="fa fa-info-circle mr-2"></i>
-                                            This ticket was auto-generated due to insufficient budget.
-                                        </div>
-                                        <div class="form-group form-inline">
-                                            <label class="col-md-3 px-0">Vendor</label>
-                                            <select class="form-control col-md-9" disabled>
-                                                <option>Linfox</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group form-inline">
-                                            <label class="col-md-3 px-0">Remarks</label>
-                                            <input type="text" class="form-control col-md-9">
-                                        </div>
-                                        <div class="form-group form-inline">
-                                            <label class="col-md-3 px-0">Template</label>
-                                            <div class="col-md-9 px-0">
-                                                <button class="btn btn-default"><i class="fa fa-download mr-2"></i>Download Template</button>
-                                            </div>
-                                        </div>
-                                        <div class="form-group form-inline">
-                                            <label class="col-md-3 px-0">Transactions<span class="text-red ml-1">*</span></label>
-                                            <select class="form-control col-md-9" disabled>
-                                                <option>Additional MHE</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group form-inline">
-                                            <label class="col-md-3 px-0">Period<span class="text-red ml-1">*</span></label>
-                                            <select class="form-control col-md-9">
-                                                <option>Please select</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group form-inline">
-                                            <label class="col-md-3 px-0">Budget Amount<span class="text-red ml-1">*</span></label>
-                                            <input type="text" class="form-control col-md-9 number-separator">
-                                        </div>
-                                        <div class="form-group form-inline">
-                                            <label class="col-md-3 px-0">Quotation/Aggreement<span class="text-red ml-1">*</span></label>
-                                            <input type="file" class="form-control text-sm col-md-9">
-                                        </div>
+                                <div class="card-body">
+                                    <div class="form-group form-inline">
+                                        <label class="col-md-3 px-0">Vendor</label>
+                                        <div class="col-md-9 px-0">Linfox</div>
                                     </div>
-                                    <!-- /.card-body -->
+                                    <div class="form-group form-inline">
+                                        <label class="col-md-3 px-0">PO Number</label>
+                                        <div class="col-md-9 px-0">PO123</div>
+                                    </div>
+                                    <div class="form-group form-inline">
+                                        <label class="col-md-3 px-0">PO Name</label>
+                                        <div class="col-md-9 px-0">XXXXX</div>
+                                    </div>
+                                    <div class="form-group form-inline">
+                                        <label class="col-md-3 px-0">Ticket Number</label>
+                                        <div class="col-md-9 px-0">TCK12345</div>
+                                    </div>
+                                    <div class="table-responsive">
+                                        <table class="table text-wrap">
 
-                                    <div class="card-footer">
-                                        <button type="submit" class="btn btn-primary">SUBMIT QUOTATION</button>
-                                        <a href="javascript:history.back()" class="btn btn-default">CANCEL</a>
+                                            <tbody>
+                                                <tr class="bg-default-dark">
+                                                    <th>
+                                                        <h5 class="mb-0"><b>BUDGET AMOUNT</b></h5>
+                                                    </th>
+                                                    <th colspan="3" class="text-right">
+                                                        <h4 class="mb-0"><b>Rp 30.000.000</b></h4>
+                                                    </th>
+                                                </tr>
+                                                <tr class="bg-light">
+                                                    <th><span class="text-primary">19/09/2023 13:00</span> - Transaction Detail</th>
+                                                    <th colspan="3" class="text-right">
+                                                        <h5 class="mb-0">Rp 5.000.000</h5>
+                                                    </th>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div><b>Plant: </b>-</div>
+                                                        <div><b>Remarks: </b>MHE Additional for Festive</div>
+                                                        <div><b>No. Proforma Invoice: </b>INV12345</div>
+                                                        <div><b>Period: </b>Jan 2023 - Mar 2023</div>
+                                                    </td>
+                                                    <td>
+                                                        <div><b>Proforma Invoice</b></div>
+                                                        <a href="">
+                                                            <i class="fa fa-download mr-2"></i>Proforma Invoice File.docx
+                                                        </a>
+                                                        <br />
+                                                        <a href="">
+                                                            <i class="fa fa-download mr-2"></i>Proforma Invoice File.docx
+                                                        </a>
+                                                    </td>
+                                                    <td>
+                                                        <div><b>Additional Docs</b></div>
+                                                        <a href="">
+                                                            <i class="fa fa-download mr-2"></i>Additional File.docx
+                                                        </a>
+                                                        <br />
+                                                        <a href="">
+                                                            <i class="fa fa-download mr-2"></i>Additional File.docx
+                                                        </a>
+                                                    </td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr class="bg-light font-weight">
+                                                    <th><span class="text-primary">19/09/2023 13:00</span> - Transaction Detail</th>
+                                                    <th colspan="3" class="text-right">
+                                                        <h5 class="mb-0">Rp 5.000.000</h5>
+                                                    </th>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div><b>Plant: </b>-</div>
+                                                        <div><b>Remarks: </b>MHE Additional for Festive</div>
+                                                        <div><b>No. Proforma Invoice: </b>INV12345</div>
+                                                        <div><b>Period: </b>Jan 2023 - Mar 2023</div>
+                                                    </td>
+                                                    <td>
+                                                        <div><b>Proforma Invoice</b></div>
+                                                        <a href="">
+                                                            <i class="fa fa-download mr-2"></i>Proforma Invoice File.docx
+                                                        </a>
+                                                        <br />
+                                                        <a href="">
+                                                            <i class="fa fa-download mr-2"></i>Proforma Invoice File.docx
+                                                        </a>
+                                                    </td>
+                                                    <td>
+                                                        <div><b>Additional Docs</b></div>
+                                                        <a href="">
+                                                            <i class="fa fa-download mr-2"></i>Additional File.docx
+                                                        </a>
+                                                        <br />
+                                                        <a href="">
+                                                            <i class="fa fa-download mr-2"></i>Additional File.docx
+                                                        </a>
+                                                    </td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr class="bg-default-danger">
+                                                    <th>
+                                                        <h5 class="mb-0"><b>REMAINING BUDGET</b></h5>
+                                                    </th>
+                                                    <th colspan="3" class="text-right">
+                                                        <h4 class="mb-0"><b>Rp 20.000.000</b></h4>
+                                                    </th>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
-                                </form>
+
+                                    <ul class="pagination m-0 justify-content-center">
+                                        <li class="page-item"><a class="page-link" href="#">«</a></li>
+                                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">»</a></li>
+                                    </ul>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="po-tracking-detail.html" class="btn btn-default"><i class="fa fa-angle-left mr-2"></i>Back to Previous</a>
+                                </div>
                             </div>
+
                         </div>
                     </div>
                 </div><!-- /.container-fluid -->
@@ -298,5 +370,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
             decimalSeparator: ',',
         })
     </script>
+    <style>
+        .table tbody td{
+            vertical-align: top !important;
+        }
+    </style>
 </body>
 </html>

@@ -123,21 +123,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="mapping.html" class="nav-link">
-                                <i class="fas fa-th-list nav-icon"></i>
-                                <p>Mapping</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
                             <a href="po.html" class="nav-link">
                                 <i class="fas fa-file-invoice nav-icon"></i>
-                                <p>PO</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="fa fa-tag nav-icon"></i>
-                                <p>Status</p>
+                                <p>PO Log</p>
                             </a>
                         </li>
                         <li class="nav-item">
@@ -169,13 +157,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             <a href="po-tracking.html" class="btn btn-default btn-sm">
                                 <i class="fa fa-angle-left mr-2"></i>Back to Previous
                             </a>
-                            <div class="h4 page-header-btn">| PO Tracking Details</div>
+                            <div class="h4 page-header-btn">| PO Details</div>
                         </div><!-- /.col -->
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                                 <li class="breadcrumb-item"><a href="po-tracking.html">PO Tracking</a></li>
-                                <li class="breadcrumb-item active">PO Tracking Details</li>
+                                <li class="breadcrumb-item active">PO Details</li>
                             </ol>
                         </div><!-- /.col -->
                     </div><!-- /.row -->
@@ -189,52 +177,69 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <!-- left column -->
                         <div class="col-md-12">
                             <div class="card card-primary">
-                                <div class="card-header">
-                                    <h3 class="card-title">PO Tracking Details</h3>
-                                </div>
-                                <!-- /.card-header -->
-                                <!-- form start -->
                                 <div class="card-body">
                                     <div class="form-group form-inline">
-                                        <label class="col-md-3 px-0">No. PO</label>
+                                        <label class="col-md-3 px-0">Vendor</label>
+                                        <div class="col-md-9 px-0">Linfox</div>
+                                    </div>
+                                    <div class="form-group form-inline">
+                                        <label class="col-md-3 px-0">PO Number</label>
                                         <div class="col-md-9 px-0">PO123</div>
                                     </div>
                                     <div class="form-group form-inline">
-                                        <label class="col-md-3 px-0">Beginning Budget</label>
-                                        <div class="col-md-9 px-0">Rp 100.000.000</div>
+                                        <label class="col-md-3 px-0">PO Name</label>
+                                        <div class="col-md-9 px-0">XXXXX</div>
+                                    </div>
+                                    <div class="form-group form-inline">
+                                        <label class="col-md-3 px-0">Ticket Number</label>
+                                        <div class="col-md-9 px-0">TCK12345</div>
                                     </div>
                                     <div class="table-responsive">
                                         <table class="table table-hover">
                                             <thead class="bg-light">
                                                 <tr>
                                                     <th>Transactions</th>
-                                                    <th>Time Stamp</th>
-                                                    <th>No. Ticket</th>
-                                                    <th>Invoice Amount (IDR)</th>
-                                                    <th>Remaining Budget (IDR)</th>
+                                                    <th>Budget Amount</th>
+                                                    <th>Remaining Budget</th>
+                                                    <th width="120">Action</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
                                                     <td>Additional MHE</td>
-                                                    <td>20/09/2023 13:00</td>
-                                                    <td>TCK12345</td>
-                                                    <td>20.000.000</td>
-                                                    <td>80.000.000</td>
+                                                    <td>Rp 30.000.000</td>
+                                                    <td>Rp 20.000.000</td>
+                                                    <td>
+                                                        <a href="po-tracking-detail-transaction.html" class="btn btn-outline-primary btn-sm">
+                                                            <i class="fa fa-search mr-2"></i>Tracking
+                                                        </a>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>Additional MHE</td>
-                                                    <td>21/09/2023 13:00</td>
-                                                    <td>TCK22222</td>
-                                                    <td>30.000.000</td>
-                                                    <td>50.000.000</td>
+                                                    <td>Rp 30.000.000</td>
+                                                    <td>Rp 20.000.000</td>
+                                                    <td>
+                                                        <a href="po-tracking-detail-transaction.html" class="btn btn-outline-primary btn-sm">
+                                                            <i class="fa fa-search mr-2"></i>Tracking
+                                                        </a>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>Additional MHE</td>
-                                                    <td>22/09/2023 13:00</td>
-                                                    <td>TCK56789</td>
-                                                    <td>20.000.000</td>
-                                                    <td>30.000.000</td>
+                                                    <td>Rp 40.000.000</td>
+                                                    <td>Rp 30.000.000</td>
+                                                    <td>
+                                                        <a href="po-tracking-detail-transaction.html" class="btn btn-outline-primary btn-sm">
+                                                            <i class="fa fa-search mr-2"></i>Tracking
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr class="font-weight bg-light" style="border-bottom: 1px solid #dee2e6">
+                                                    <td>TOTAL</td>
+                                                    <td>Rp 100.000.000</td>
+                                                    <td>Rp 70.000.000</td>
+                                                    <td></td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -247,8 +252,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                         <li class="page-item"><a class="page-link" href="#">»</a></li>
                                     </ul>
                                 </div>
-                                <!-- /.card-body -->
-
                                 <div class="card-footer">
                                     <a href="po-tracking.html" class="btn btn-default"><i class="fa fa-angle-left mr-2"></i>Back to Previous</a>
                                 </div>

@@ -27,7 +27,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Theme style -->
     <link rel="stylesheet" href="../dist/css/style.css">
 </head>
-<body class="hold-transition sidebar-mini layout-navbar-fixed layout-fixed sidebar-collapse">
+<body class="hold-transition sidebar-mini layout-navbar-fixed layout-fixed">
     <div class="wrapper">
 
         <!-- Navbar -->
@@ -92,7 +92,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                         <li class="nav-header">MAIN MENU</li>
                         <li class="nav-item">
-                            <a href="index.html" class="nav-link active">
+                            <a href="index.html" class="nav-link">
                                 <i class="nav-icon fas fa-home"></i>
                                 <p>Home</p>
                             </a>
@@ -111,7 +111,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </li>
                         <li class="nav-header">MASTER DATA</li>
                         <li class="nav-item">
-                            <a href="vendors.html" class="nav-link">
+                            <a href="vendors.html" class="nav-link active">
                                 <i class="nav-icon fas fa-store"></i>
                                 <p>Vendors</p>
                             </a>
@@ -129,7 +129,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="po-tracking.html" class="nav-link active">
+                            <a href="po-tracking.html" class="nav-link">
                                 <i class="fas fa-search nav-icon"></i>
                                 <p>PO Tracking</p>
                             </a>
@@ -154,16 +154,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <a href="javascript:history.back()" class="btn btn-default btn-sm">
+                            <a href="vendors.html" class="btn btn-default btn-sm">
                                 <i class="fa fa-angle-left mr-2"></i>Back to Previous
                             </a>
-                            <div class="h4 page-header-btn">| Create New Quotation</div>
+                            <div class="h4 page-header-btn">| Vendor PO List</div>
                         </div><!-- /.col -->
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                <li class="breadcrumb-item"><a href="index.html">Open Quotation Dashboard</a></li>
-                                <li class="breadcrumb-item active">Create New Quotation</li>
+                                <li class="breadcrumb-item"><a href="vendors.html">Vendors</a></li>
+                                <li class="breadcrumb-item active">PO List</li>
                             </ol>
                         </div><!-- /.col -->
                     </div><!-- /.row -->
@@ -174,65 +174,96 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <div class="content">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-12">
+                        <!-- left column -->
+                        <div class="col-md-12">
                             <div class="card card-primary">
                                 <div class="card-header">
-                                    <h3 class="card-title">PR Request</h3>
+                                    <h3 class="card-title">Vendor: Linfox</h3>
                                 </div>
-                                <!-- /.card-header -->
-                                <!-- form start -->
-                                <form>
-                                    <div class="card-body">
-                                        <div class="alert alert-light alert-dismissible text-sm">
-                                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                                            <i class="fa fa-info-circle mr-2"></i>
-                                            This ticket was auto-generated due to insufficient budget.
-                                        </div>
-                                        <div class="form-group form-inline">
-                                            <label class="col-md-3 px-0">Vendor</label>
-                                            <select class="form-control col-md-9" disabled>
-                                                <option>Linfox</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group form-inline">
-                                            <label class="col-md-3 px-0">Remarks</label>
-                                            <input type="text" class="form-control col-md-9">
-                                        </div>
-                                        <div class="form-group form-inline">
-                                            <label class="col-md-3 px-0">Template</label>
-                                            <div class="col-md-9 px-0">
-                                                <button class="btn btn-default"><i class="fa fa-download mr-2"></i>Download Template</button>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <input class="form-control" placeholder="Search">
                                             </div>
                                         </div>
-                                        <div class="form-group form-inline">
-                                            <label class="col-md-3 px-0">Transactions<span class="text-red ml-1">*</span></label>
-                                            <select class="form-control col-md-9" disabled>
-                                                <option>Additional MHE</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group form-inline">
-                                            <label class="col-md-3 px-0">Period<span class="text-red ml-1">*</span></label>
-                                            <select class="form-control col-md-9">
-                                                <option>Please select</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group form-inline">
-                                            <label class="col-md-3 px-0">Budget Amount<span class="text-red ml-1">*</span></label>
-                                            <input type="text" class="form-control col-md-9 number-separator">
-                                        </div>
-                                        <div class="form-group form-inline">
-                                            <label class="col-md-3 px-0">Quotation/Aggreement<span class="text-red ml-1">*</span></label>
-                                            <input type="file" class="form-control text-sm col-md-9">
+                                        <div class="col-md-3">
+                                            <button type="submit" class="btn btn-default" title="Search">
+                                                <i class="fas fa-search"></i>
+                                            </button>
+                                            <button type="submit" class="btn btn-default" title="Reset Filter">
+                                                <i class="fas fa-redo"></i>
+                                            </button>
                                         </div>
                                     </div>
-                                    <!-- /.card-body -->
+                                    <div class="table-responsive">
+                                        <table class="table table-hover">
+                                            <thead class="bg-light">
+                                                <tr>
+                                                    <th>PO Number & Name</th>
+                                                    <th>Ticket Number</th>
+                                                    <th>Total Budget</th>
+                                                    <th>Remaining Budget</th>
+                                                    <th width="120">Details</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <b>PO123</b><br />
+                                                        Some PO Name
+                                                    </td>
+                                                    <td>TCK12345</td>
+                                                    <td>Rp 100.000.000</td>
+                                                    <td>Rp 70.000.000</td>
+                                                    <td>
+                                                        <a href="po-tracking-detail.html" class="btn btn-outline-primary btn-sm" target="_blank">
+                                                            <i class="fa fa-search mr-2"></i>Details
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <b>PO456</b><br />
+                                                        Some PO Name
+                                                    </td>
+                                                    <td>TCK12345</td>
+                                                    <td>Rp 100.000.000</td>
+                                                    <td>Rp 70.000.000</td>
+                                                    <td>
+                                                        <a href="po-tracking-detail.html" class="btn btn-outline-primary btn-sm" target="_blank">
+                                                            <i class="fa fa-search mr-2"></i>Details
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <b>PO789</b><br />
+                                                        Some PO Name
+                                                    </td>
+                                                    <td>TCK12345</td>
+                                                    <td>Rp 100.000.000</td>
+                                                    <td>Rp 70.000.000</td>
+                                                    <td>
+                                                        <a href="po-tracking-detail.html" class="btn btn-outline-primary btn-sm" target="_blank">
+                                                            <i class="fa fa-search mr-2"></i>Details
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <ul class="pagination m-0 justify-content-center">
+                                        <li class="page-item"><a class="page-link" href="#">«</a></li>
+                                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">»</a></li>
+                                    </ul>
+                                </div>
 
-                                    <div class="card-footer">
-                                        <button type="submit" class="btn btn-primary">SUBMIT QUOTATION</button>
-                                        <a href="javascript:history.back()" class="btn btn-default">CANCEL</a>
-                                    </div>
-                                </form>
                             </div>
+
                         </div>
                     </div>
                 </div><!-- /.container-fluid -->

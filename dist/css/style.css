@@ -10162,6 +10162,10 @@ button.bg-dark:focus {
   text-transform: capitalize !important;
 }
 
+.font-weight {
+    font-weight: 700 !important;
+}
+
 .font-weight-light {
   font-weight: 300 !important;
 }

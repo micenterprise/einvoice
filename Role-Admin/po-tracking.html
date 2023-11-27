@@ -123,21 +123,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="mapping.html" class="nav-link">
-                                <i class="fas fa-th-list nav-icon"></i>
-                                <p>Mapping</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
                             <a href="po.html" class="nav-link">
                                 <i class="fas fa-file-invoice nav-icon"></i>
-                                <p>PO</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="fa fa-tag nav-icon"></i>
-                                <p>Status</p>
+                                <p>PO Log</p>
                             </a>
                         </li>
                         <li class="nav-item">
@@ -188,7 +176,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 <!-- form start -->
                                 <div class="card-body">
                                     <div class="row">
-                                        <div class="col-md-2">
+                                        <div class="col-md-3">
                                             <div class="form-group">
                                                 <input class="form-control" placeholder="PO Number">
                                             </div>
@@ -206,21 +194,24 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                         <table class="table table-hover">
                                             <thead class="bg-light">
                                                 <tr>
-                                                    <th>No. PO</th>
-                                                    <th>PO Name</th>
-                                                    <th>Beginning Budget</th>
+                                                    <th>PO Number & Name</th>
+                                                    <th>Ticket Number</th>
+                                                    <th>Vendor</th>
+                                                    <th>Total Budget</th>
                                                     <th>Remaining Budget</th>
-                                                    <th>Time Stamp</th>
                                                     <th width="120">Details</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td>PO123</td>
-                                                    <td>XXXXX</td>
-                                                    <td>100.000.000</td>
-                                                    <td>70.000.000</td>
-                                                    <td>18/09/2023 13:00</td>
+                                                    <td>
+                                                        <b>PO123</b><br />
+                                                        Some PO Name
+                                                    </td>
+                                                    <td>TCK12345</td>
+                                                    <td>Linfox</td>
+                                                    <td>Rp 100.000.000</td>
+                                                    <td>Rp 70.000.000</td>
                                                     <td>
                                                         <a href="po-tracking-detail.html" class="btn btn-outline-primary btn-sm">
                                                             <i class="fa fa-search mr-2"></i>Details
@@ -228,29 +219,21 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>PO456</td>
-                                                    <td>XXXXX</td>
-                                                    <td>200.000.000</td>
-                                                    <td>60.000.000</td>
-                                                    <td>18/09/2023 13:00</td>
+                                                    <td>
+                                                        <b>PO456</b><br />
+                                                        Some PO Name
+                                                    </td>
+                                                    <td>TCK12345</td>
+                                                    <td>MIC Enterprise</td>
+                                                    <td>Rp 200.000.000</td>
+                                                    <td>Rp 60.000.000</td>
                                                     <td>
                                                         <a href="po-tracking-detail.html" class="btn btn-outline-primary btn-sm">
                                                             <i class="fa fa-search mr-2"></i>Details
                                                         </a>
                                                     </td>
                                                 </tr>
-                                                <tr>
-                                                    <td>PO789</td>
-                                                    <td>XXXXX</td>
-                                                    <td>60.000.000</td>
-                                                    <td>55.000.000</td>
-                                                    <td>18/09/2023 13:00</td>
-                                                    <td>
-                                                        <a href="po-tracking-detail.html" class="btn btn-outline-primary btn-sm">
-                                                            <i class="fa fa-search mr-2"></i>Details
-                                                        </a>
-                                                    </td>
-                                                </tr>
+                                                
                                             </tbody>
                                         </table>
                                     </div>
