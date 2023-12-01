@@ -6828,6 +6828,10 @@ a.close.disabled, a.disabled.mailbox-attachment-close {
   background-color: #005eb8 !important;
 }
 
+bg.none {
+    background-color: none !important;
+}
+
 a.bg-primary:hover, a.bg-primary:focus,
 button.bg-primary:hover,
 button.bg-primary:focus {
@@ -8196,6 +8200,9 @@ button.bg-dark:focus {
   width: auto !important;
 }
 
+.w-120px {
+    width: 120px !important;
+}
 .w-200px {
     width: 200px !important;
 }
@@ -8246,6 +8253,14 @@ button.bg-dark:focus {
 
 .m-0 {
   margin: 0 !important;
+}
+
+.mt-10px {
+    margin-top: 10px !important;
+}
+
+.mt-2px {
+    margin-top: 2px !important;
 }
 
 .mt-0,
@@ -35076,7 +35091,7 @@ a.close.disabled, a.disabled.mailbox-attachment-close {
 
 .login-box,
 .register-box {
-  width: 360px;
+  width: 60%;
 }
 
 @media (max-width: 576px) {
@@ -53134,4 +53149,17 @@ a.text-muted:hover {
     margin-top: 0;
     position: relative;
     z-index: 2;
+}
+
+table tbody tr.top-borderless td{
+    border-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+table tbody tr.align-top td {
+    vertical-align: top !important
+}
+
+table thead tr.align-middle th {
+    vertical-align: middle !important
 }

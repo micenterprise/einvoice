@@ -146,6 +146,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 <p>Transactions</p>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="area.html" class="nav-link">
+                                <i class="fas fa-map-marker-alt nav-icon"></i>
+                                <p>Area</p>
+                            </a>
+                        </li>
                     </ul>
                 </nav>
                 <!-- /.sidebar-menu -->
@@ -209,20 +215,24 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                         <table class="table table-hover">
                                             <thead class="bg-light">
                                                 <tr>
-                                                    <th>Name</th>
-                                                    <th>Email</th>
-                                                    <th>Role</th>
                                                     <th>Area</th>
+                                                    <th>Name & Email (W1)</th>
+                                                    <th>Name & Email (W2)</th>
                                                     <th width="120">Action</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <!--Berisi list user logistic (WL1)-->
                                                 <tr>
-                                                    <td>Indah Permata</td>
-                                                    <td>indah.permata@unilever.com</td>
-                                                    <td>Logistic (WL1)</td>
                                                     <td>Jawa</td>
+                                                    <td>
+                                                        <b>Indah Permata</b> <br />
+                                                        indah.permata@unilever.com
+                                                    </td>
+                                                    <td>
+                                                        <b>Kumala Dewi</b> <br />
+                                                        kumala.dewi@unilever.com
+                                                    </td>
                                                     <td>
                                                         <button type="button" class="btn btn-outline-primary btn-sm btn-block" data-toggle="modal" data-target=".modal-edit-user">
                                                             <i class="fa fa-pen mr-2"></i>Set WL2
@@ -237,11 +247,22 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                                         </button>
                                                                     </div>
                                                                     <div class="modal-body">
-                                                                        <p>Please select a user as WL2 for <b>Indah Permata</b> (indah.permata@unilever.com)</p>
+                                                                        <p class="mb-2">Please select a user as WL2 for</p>
+                                                                        <div class="form-group form-inline m-0">
+                                                                            <label class="col-4 p-0">WL1 Name</label>
+                                                                            <div class="col-8">Indah Permata</div>
+                                                                        </div>
+                                                                        <div class="form-group form-inline m-0">
+                                                                            <label class="col-4 p-0">WL1 Email</label>
+                                                                            <div class="col-8">indah.permata@unilever.com</div>
+                                                                        </div>
+                                                                        <div class="form-group form-inline mb-2">
+                                                                            <label class="col-4 p-0">Area</label>
+                                                                            <div class="col-8">Jawa</div>
+                                                                        </div>
                                                                         <div class="form-group">
-                                                                            <label>Select WL2</label>
                                                                             <select class="form-control">
-                                                                                <option selected disabled>Please select</option>
+                                                                                <option selected disabled>Select WL2</option>
                                                                                 <!--Dropdown hanya berisi list user Logistic (WL2)-->
                                                                             </select>
                                                                         </div>
@@ -256,10 +277,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Juliana Rani</td>
-                                                    <td>juliana.rani@unilever.com</td>
-                                                    <td>Logistic (WL1)</td>
                                                     <td>Jawa</td>
+                                                    <td>
+                                                        <b>Juliana Rani</b> <br />
+                                                        juliana.rani@unilever.com
+                                                    </td>
+                                                    <td><i>Not assigned yet</i></td>
                                                     <td>
                                                         <button type="button" class="btn btn-outline-primary btn-sm btn-block" data-toggle="modal" data-target=".modal-edit-user">
                                                             <i class="fa fa-pen mr-2"></i>Set WL2
@@ -267,10 +290,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Randi Pratama</td>
-                                                    <td>randi.pratama@unilever.com</td>
-                                                    <td>Logistic (WL1)</td>
                                                     <td>Jawa</td>
+                                                    <td>
+                                                        <b>Randi Pratama</b> <br />
+                                                        randi.pratama@unilever.com
+                                                    </td>
+                                                    <td><i>Not assigned yet</i></td>
                                                     <td>
                                                         <button type="button" class="btn btn-outline-primary btn-sm btn-block" data-toggle="modal" data-target=".modal-edit-user">
                                                             <i class="fa fa-pen mr-2"></i>Set WL2

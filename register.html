@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Unilever QRIS</title>
+
+    <!-- Favicons -->
+    <link href="dist/img/favicon.ico" rel="icon">
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+    <!-- daterange picker -->
+    <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+    <!-- Tempusdominus Bootstrap 4 -->
+    <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+    <!-- Select2 -->
+    <link rel="stylesheet" href="plugins/select2/css/select2.min.css">
+    <link rel="stylesheet" href="plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="dist/css/style.css">
+</head>
+<body class="hold-transition login-page">
+    <div class="login-box">
+        <!-- /.login-logo -->
+        <div class="card" style="border-radius: 0;">
+            <div class="card-body p-0">
+                <div class="row">
+                    <div class="col-md-6 p-0" style="background: url(dist/img/bg-login.jpg); background-position-x: 60%">
+                    </div>
+                    <div class="col-md-6 p-5">
+                        <h4>Register <b>QRIS</b></h4>
+                        <p>Please complete the form below to register</p>
+                        <div class="form-group">
+                            <label>Name</label>
+                            <div class="input-group mb-3">
+                                <input type="email" class="form-control" placeholder="Name">
+                                <div class="input-group-append">
+                                    <div class="input-group-text">
+                                        <span class="fas fa-user"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <div class="input-group mb-3">
+                                <input type="email" class="form-control" value="user@unilever.com" disabled>
+                                <div class="input-group-append">
+                                    <div class="input-group-text">
+                                        <span class="fas fa-envelope"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Role</label>
+                            <select class="form-control">
+                                <option selected disabled>Please select</option>
+                                <option>Logistic (WL1)</option>
+                                <option>Logistic WL2</option>
+                                <option>COUPA Admin</option>
+                                <option>SCF</option>
+                                <option>Administrator</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Area</label>
+                            <div class="row px-2">
+                                <div class="custom-control custom-checkbox col-md-4">
+                                    <input class="custom-control-input" type="checkbox" id="customCheckbox1" value="option1">
+                                    <label for="customCheckbox1" class="custom-control-label font-weight-normal">Jawa</label>
+                                </div>
+                                <div class="custom-control custom-checkbox col-md-4">
+                                    <input class="custom-control-input" type="checkbox" id="customCheckbox2" value="option2">
+                                    <label for="customCheckbox2" class="custom-control-label font-weight-normal">Sumatera</label>
+                                </div>
+                                <div class="custom-control custom-checkbox col-md-4">
+                                    <input class="custom-control-input" type="checkbox" id="customCheckbox3" value="option3">
+                                    <label for="customCheckbox3" class="custom-control-label font-weight-normal">Bali</label>
+                                </div>
+                                <div class="custom-control custom-checkbox col-md-4">
+                                    <input class="custom-control-input" type="checkbox" id="customCheckbox4" value="option4">
+                                    <label for="customCheckbox4" class="custom-control-label font-weight-normal">Kalimantan</label>
+                                </div>
+                                <div class="custom-control custom-checkbox col-md-4">
+                                    <input class="custom-control-input" type="checkbox" id="customCheckbox5" value="option5">
+                                    <label for="customCheckbox5" class="custom-control-label font-weight-normal">OI</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="social-auth-links text-center mt-4">
+                            <a href="index.html" class="btn btn-block btn-primary mb-3">
+                                Register
+                            </a>
+                            <p class="mb-0">Already have an account? <b><a href="login.html">Login</a></b></p>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- /.social-auth-links -->
+            </div>
+            <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+    </div>
+    <!-- /.login-box -->
+    <!-- jQuery -->
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Select2 -->
+    <script src="plugins/select2/js/select2.full.min.js"></script>
+    <!-- InputMask -->
+    <script src="plugins/moment/moment.min.js"></script>
+    <script src="plugins/inputmask/jquery.inputmask.min.js"></script>
+    <!-- date-range-picker -->
+    <script src="plugins/daterangepicker/daterangepicker.js"></script>
+    <!-- Tempusdominus Bootstrap 4 -->
+    <script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+    <!-- Easy Number Separator -->
+    <script src="plugins/easy-number-separator/easy-number-separator.js"></script>
+    <!-- AdminLTE App -->
+    <script src="dist/js/script.js"></script>
+    <!-- Page specific script -->
+    <script>
+        $(function () {
+            //Initialize Select2 Elements
+            $('.select2').select2()
+
+            //Initialize Select2 Elements
+            $('.select2bs4').select2({
+                theme: 'bootstrap4'
+            })
+
+            //Date picker
+            $('#effectivedate').datetimepicker({
+                format: 'L'
+            });
+        })
+        easyNumberSeparator({
+            selector: '.number-separator',
+            separator: '.',
+            decimalSeparator: ',',
+        })
+    </script>
+</body>
+</html>

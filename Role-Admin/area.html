@@ -27,7 +27,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Theme style -->
     <link rel="stylesheet" href="../dist/css/style.css">
 </head>
-<body class="hold-transition sidebar-mini layout-navbar-fixed layout-fixed sidebar-collapse">
+<body class="hold-transition sidebar-mini layout-navbar-fixed layout-fixed">
     <div class="wrapper">
 
         <!-- Navbar -->
@@ -92,7 +92,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                         <li class="nav-header">MAIN MENU</li>
                         <li class="nav-item">
-                            <a href="index.html" class="nav-link active">
+                            <a href="index.html" class="nav-link">
                                 <i class="nav-icon fas fa-home"></i>
                                 <p>Home</p>
                             </a>
@@ -124,12 +124,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </li>
                         <li class="nav-item">
                             <a href="po.html" class="nav-link">
-                                <i class="fas fa-file-invoice nav-icon"></i>
+                                <i class="fas fa-history nav-icon"></i>
                                 <p>PO Log</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="po-tracking.html" class="nav-link active">
+                            <a href="po-tracking.html" class="nav-link">
                                 <i class="fas fa-search nav-icon"></i>
                                 <p>PO Tracking</p>
                             </a>
@@ -147,7 +147,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="area.html" class="nav-link">
+                            <a href="area.html" class="nav-link active">
                                 <i class="fas fa-map-marker-alt nav-icon"></i>
                                 <p>Area</p>
                             </a>
@@ -166,15 +166,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <a href="javascript:history.back()" class="btn btn-default btn-sm">
-                                <i class="fa fa-angle-left mr-2"></i>Back to Previous
-                            </a>
-                            <div class="h4 page-header-btn">| Invoice Detail</div>
+                            <h1 class="m-0">Area</h1>
                         </div><!-- /.col -->
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                <li class="breadcrumb-item active">Invoice Detail</li>
+                                <li class="breadcrumb-item active">Area</li>
                             </ol>
                         </div><!-- /.col -->
                     </div><!-- /.row -->
@@ -185,146 +182,101 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <div class="content">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-12">
+                        <!-- left column -->
+                        <div class="col-md-12">
                             <div class="card card-primary card-tabs">
-                                <div class="card-header p-0 pt-1">
-                                    <ul class="nav nav-tabs" id="tablist" role="tablist">
-                                        <li class="nav-item">
-                                            <a class="nav-link active" id="home-tab" data-toggle="pill" href="#tab-home" role="tab" aria-controls="tab-home" aria-selected="true">Invoice Details</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" id="logs-tab" data-toggle="pill" href="#tab-logs" role="tab" aria-controls="tab-logs" aria-selected="false">Activity Logs</a>
-                                        </li>
+                                <div class="card-body">
+                                    <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target=".modal-add-vendor">
+                                        <i class="fa fa-plus mr-2"></i>Add New Area
+                                    </button>
+
+                                    <div class="modal fade modal-add-vendor" tabindex="-1" role="dialog" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title">Add New Area</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="form-group">
+                                                        <label>Area</label>
+                                                        <input type="text" class="form-control" placeholder="Area name" />
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                                    <a href="" type="button" class="btn btn-primary">Save Area</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <input class="form-control" placeholder="Search">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <button type="submit" class="btn btn-default" title="Search">
+                                                <i class="fas fa-search"></i>
+                                            </button>
+                                            <button type="submit" class="btn btn-default" title="Reset Filter">
+                                                <i class="fas fa-redo"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="table-responsive">
+                                        <table class="table table-hover">
+                                            <thead class="bg-light">
+                                                <tr>
+                                                    <th>Area</th>
+                                                    <th>Status</th>
+                                                    <th width="250">Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Jawa</td>
+                                                    <td><span class="badge badge-success">ACTIVE</span></td>
+                                                    <td>
+                                                        <a href="area-plants.html" class="btn btn-outline-primary btn-sm">
+                                                            <i class="fa fa-search mr-2"></i>Plant List
+                                                        </a>
+                                                        <button type="button" class="btn btn-outline-danger btn-sm w-120px">
+                                                            <i class="fa fa-times mr-2"></i>Set Inactive
+                                                        </button>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>Bali</td>
+                                                    <td><span class="badge badge-danger">INACTIVE</span></td>
+                                                    <td>
+                                                        <a href="area-plants.html" class="btn btn-outline-primary btn-sm">
+                                                            <i class="fa fa-search mr-2"></i>Plant List
+                                                        </a>
+                                                        <button type="button" class="btn btn-outline-success btn-sm w-120px">
+                                                            <i class="fa fa-check mr-2"></i>Set Active
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <ul class="pagination m-0 justify-content-center">
+                                        <li class="page-item"><a class="page-link" href="#">«</a></li>
+                                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">»</a></li>
                                     </ul>
                                 </div>
-                                <div class="tab-content" id="tabContent">
-                                    <div class="tab-pane fade show active" id="tab-home" role="tabpanel" aria-labelledby="home-tab">
+                                <!-- /.card-body -->
 
-                                        <div class="card-body">
-                                            <p class="text-primary"><b>VENDOR & INVOICE INFO</b></p>
-                                            <div class="form-group form-inline">
-                                                <label class="col-sm-3 px-0">Ticket Number</label>
-                                                <input type="text" class="form-control col-md-9" value="TCK123" disabled>
-                                            </div>
-                                            <div class="form-group form-inline">
-                                                <label class="col-sm-3 px-0">Current Status</label>
-                                                <div class="col-md-9 px-0"><span class="badge badge-warning">OPEN TICKET</span></div>
-                                            </div>
-                                            <div class="form-group form-inline">
-                                                <label class="col-md-3 px-0">Vendor</label>
-                                                <select class="form-control col-md-9" disabled>
-                                                    <option>Linfox</option>
-                                                </select>
-                                            </div>
-                                            <div class="form-group form-inline">
-                                                <label class="col-md-3 px-0">Transactions<span class="text-red ml-1">*</span></label>
-                                                <select class="form-control col-md-9" disabled>
-                                                    <option>Additional MHE</option>
-                                                </select>
-                                            </div>
-                                            <div class="form-group form-inline">
-                                                <label class="col-md-3 px-0">Details<span class="text-red ml-1">*</span></label>
-                                                <select class="form-control col-md-9" disabled>
-                                                    <option>Festive</option>
-                                                </select>
-                                            </div>
-                                            <div class="form-group form-inline">
-                                                <label class="col-md-3 px-0">Plant<span class="text-red ml-1">*</span></label>
-                                                <select class="form-control col-md-9" disabled>
-                                                    <option>1950</option>
-                                                </select>
-                                            </div>
-                                            <div class="form-group form-inline">
-                                                <label class="col-sm-3 px-0">Remarks</label>
-                                                <input type="text" class="form-control col-md-9" value="MHE Additional for Festive" disabled>
-                                            </div>
-                                            <p class="text-primary mt-4"><b>TRANSACTION INFO & PROCESS OUTPUT</b></p>
-                                            <div class="table-responsive">
-                                                <table class="table table-hover text-wrap">
-                                                    <thead class="bg-light">
-                                                        <tr>
-                                                            <th>Period</th>
-                                                            <th>Transaction</th>
-                                                            <th>Budget Amount (IDR)</th>
-                                                            <th>No. PR</th>
-                                                            <th>No. PO</th>
-                                                            <th>No. RC</th>
-                                                            <th>No. Matdoc</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>
-                                                                <select class="form-control" disabled>
-                                                                    <option>Jan 2023 - Mar 2023</option>
-                                                                </select>
-                                                            </td>
-                                                            <td>
-                                                                <select class="form-control" disabled>
-                                                                    <option>Additional MHE</option>
-                                                                </select>
-                                                            </td>
-                                                            <td><input type="text" class="form-control number-separator" value="10000000" disabled /></td>
-                                                            <td><input class="form-control" placeholder="No. PR" /></td>
-                                                            <td><input class="form-control" placeholder="No. PO" /></td>
-                                                            <td><input class="form-control" placeholder="No. RC" /></td>
-                                                            <td><input class="form-control" placeholder="No. Matdoc" /></td>
-                                                        </tr>
-
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                            <p class="text-primary mt-1"><b>RELATED FILE DOWNLOAD</b></p>
-                                            <div class="form-group form-inline">
-                                                <label class="col-sm-3 px-0">Proforma Invoice</label>
-                                                <div class="col-sm-9 px-0">
-                                                    <button class="btn btn-default btn-sm"><i class="fa fa-download mr-2"></i>Download Document</button>
-                                                </div>
-                                            </div>
-                                            <div class="form-group form-inline">
-                                                <label class="col-sm-3 px-0">Additional Document</label>
-                                                <div class="col-sm-9 px-0">
-                                                    <button class="btn btn-default btn-sm"><i class="fa fa-download mr-2"></i>Download Document</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card-footer">
-                                            <a href="" class="btn btn-primary">UPDATE TICKET</a>
-                                            <a href="" class="btn btn-danger">CLOSE TICKET</a>
-                                        </div>
-                                    </div>
-                                    <div class="tab-pane fade" id="tab-logs" role="tabpanel" aria-labelledby="home-tab">
-
-                                        <div class="card-body">
-                                            <div class="table-responsive">
-                                                <table class="table table-hover text-wrap">
-                                                    <thead class="bg-light">
-                                                        <tr>
-                                                            <th>Date</th>
-                                                            <th>Duration</th>
-                                                            <th>PIC Name</th>
-                                                            <th>Status</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>18/09/23</td>
-                                                            <td>01:23:45</td>
-                                                            <td>Albert</td>
-                                                            <td>Approved</td>
-                                                        </tr>
-
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                        <div class="card-footer">
-                                            <a href="javascript:history.back()" class="btn btn-default"><i class="fa fa-angle-left mr-2"></i>Back to Previous</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- /.card -->
                             </div>
+
                         </div>
                     </div>
                 </div><!-- /.container-fluid -->

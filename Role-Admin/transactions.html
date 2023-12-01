@@ -146,6 +146,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 <p>Transactions</p>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="area.html" class="nav-link">
+                                <i class="fas fa-map-marker-alt nav-icon"></i>
+                                <p>Area</p>
+                            </a>
+                        </li>
                     </ul>
                 </nav>
                 <!-- /.sidebar-menu -->
@@ -178,8 +184,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <div class="row">
                         <!-- left column -->
                         <div class="col-md-12">
-                            <div class="card">
-                                <!-- form start -->
+                            <div class="card card-primary card-tabs">
                                 <div class="card-body">
                                     <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target=".modal-add-vendor">
                                         <i class="fa fa-plus mr-2"></i>Add New Transaction
@@ -189,7 +194,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                         <div class="modal-dialog">
                                             <div class="modal-content">
                                                 <div class="modal-header">
-                                                    <h5 class="modal-title">Add New Vendor</h5>
+                                                    <h5 class="modal-title">Add New Transaction</h5>
                                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                         <span aria-hidden="true">&times;</span>
                                                     </button>
@@ -237,7 +242,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                     <th>Category</th>
                                                     <th>Transaction</th>
                                                     <th>Status</th>
-                                                    <th width="150">Action</th>
+                                                    <th width="250">Action</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -246,17 +251,24 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                     <td>Additional MHE</td>
                                                     <td><span class="badge badge-success">ACTIVE</span></td>
                                                     <td>
-                                                        <button type="button" class="btn btn-outline-danger btn-sm btn-block">
+                                                        <a href="transactions-detail.html" class="btn btn-outline-primary btn-sm">
+                                                            <i class="fa fa-search mr-2"></i>Detail List
+                                                        </a>
+                                                        <button type="button" class="btn btn-outline-danger btn-sm w-120px">
                                                             <i class="fa fa-times mr-2"></i>Set Inactive
                                                         </button>
                                                     </td>
                                                 </tr>
+
                                                 <tr>
                                                     <td>Warehouse</td>
-                                                    <td>Some Transaction</td>
+                                                    <td>Additional MHE</td>
                                                     <td><span class="badge badge-danger">INACTIVE</span></td>
                                                     <td>
-                                                        <button type="button" class="btn btn-outline-success btn-sm btn-block">
+                                                        <a href="transactions-detail.html" class="btn btn-outline-primary btn-sm">
+                                                            <i class="fa fa-search mr-2"></i>Detail List
+                                                        </a>
+                                                        <button type="button" class="btn btn-outline-success btn-sm w-120px">
                                                             <i class="fa fa-check mr-2"></i>Set Active
                                                         </button>
                                                     </td>

@@ -146,6 +146,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 <p>Transactions</p>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="area.html" class="nav-link">
+                                <i class="fas fa-map-marker-alt nav-icon"></i>
+                                <p>Area</p>
+                            </a>
+                        </li>
                     </ul>
                 </nav>
                 <!-- /.sidebar-menu -->
@@ -226,9 +232,28 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                     </div>
                                                     <div class="form-group">
                                                         <label>Area</label>
-                                                        <select class="form-control">
-                                                            <option id="opt" selected disabled>Please select</option>
-                                                        </select>
+                                                        <div class="row px-2">
+                                                            <div class="custom-control custom-checkbox col-md-4">
+                                                                <input class="custom-control-input" type="checkbox" id="customCheckbox1" value="option1">
+                                                                <label for="customCheckbox1" class="custom-control-label font-weight-normal">Jawa</label>
+                                                            </div>
+                                                            <div class="custom-control custom-checkbox col-md-4">
+                                                                <input class="custom-control-input" type="checkbox" id="customCheckbox2" value="option2">
+                                                                <label for="customCheckbox2" class="custom-control-label font-weight-normal">Sumatera</label>
+                                                            </div>
+                                                            <div class="custom-control custom-checkbox col-md-4">
+                                                                <input class="custom-control-input" type="checkbox" id="customCheckbox3" value="option3">
+                                                                <label for="customCheckbox3" class="custom-control-label font-weight-normal">Bali</label>
+                                                            </div>
+                                                            <div class="custom-control custom-checkbox col-md-4">
+                                                                <input class="custom-control-input" type="checkbox" id="customCheckbox4" value="option4">
+                                                                <label for="customCheckbox4" class="custom-control-label font-weight-normal">Kalimantan</label>
+                                                            </div>
+                                                            <div class="custom-control custom-checkbox col-md-4">
+                                                                <input class="custom-control-input" type="checkbox" id="customCheckbox5" value="option5">
+                                                                <label for="customCheckbox5" class="custom-control-label font-weight-normal">OI</label>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="modal-footer">
@@ -261,7 +286,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                     <th>Email</th>
                                                     <th>Role</th>
                                                     <th>Area</th>
-                                                    <th width="100">Action</th>
+                                                    <th>Status</th>
+                                                    <th width="210">Action</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -269,7 +295,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                     <td>Jaya Wijaya</td>
                                                     <td>jaya.wijaya@unilever.com</td>
                                                     <td>Administrator</td>
-                                                    <td>Jawa</td>
+                                                    <td>Jawa, Sumatera</td>
+                                                    <td><span class="badge badge-success">ACTIVE</span></td>
                                                     <td>
                                                         <button type="button" class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target=".modal-edit-user">
                                                             <i class="fa fa-pen mr-2"></i>Edit
@@ -296,7 +323,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                                             <label>Role</label>
                                                                             <select class="form-control">
                                                                                 <option selected disabled>Please select</option>
-                                                                                <option>Vendor</option>
                                                                                 <option>Logistic (WL1)</option>
                                                                                 <option>Logistic (WL2)</option>
                                                                                 <option>COUPA Admin</option>
@@ -306,10 +332,28 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                                         </div>
                                                                         <div class="form-group">
                                                                             <label>Area</label>
-                                                                            <select class="form-control">
-                                                                                <option disabled>Please select</option>
-                                                                                <option selected>Jawa</option>
-                                                                            </select>
+                                                                            <div class="row px-2">
+                                                                                <div class="custom-control custom-checkbox col-md-4">
+                                                                                    <input class="custom-control-input" type="checkbox" id="customCheckbox1" value="option1" checked>
+                                                                                    <label for="customCheckbox1" class="custom-control-label font-weight-normal">Jawa</label>
+                                                                                </div>
+                                                                                <div class="custom-control custom-checkbox col-md-4">
+                                                                                    <input class="custom-control-input" type="checkbox" id="customCheckbox2" value="option2" checked>
+                                                                                    <label for="customCheckbox2" class="custom-control-label font-weight-normal">Sumatera</label>
+                                                                                </div>
+                                                                                <div class="custom-control custom-checkbox col-md-4">
+                                                                                    <input class="custom-control-input" type="checkbox" id="customCheckbox3" value="option3">
+                                                                                    <label for="customCheckbox3" class="custom-control-label font-weight-normal">Bali</label>
+                                                                                </div>
+                                                                                <div class="custom-control custom-checkbox col-md-4">
+                                                                                    <input class="custom-control-input" type="checkbox" id="customCheckbox4" value="option4">
+                                                                                    <label for="customCheckbox4" class="custom-control-label font-weight-normal">Kalimantan</label>
+                                                                                </div>
+                                                                                <div class="custom-control custom-checkbox col-md-4">
+                                                                                    <input class="custom-control-input" type="checkbox" id="customCheckbox5" value="option5">
+                                                                                    <label for="customCheckbox5" class="custom-control-label font-weight-normal">OI</label>
+                                                                                </div>
+                                                                            </div>
                                                                         </div>
                                                                     </div>
                                                                     <div class="modal-footer">
@@ -319,16 +363,24 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                                 </div>
                                                             </div>
                                                         </div>
+
+                                                        <button type="button" class="btn btn-outline-danger btn-sm w-120px">
+                                                            <i class="fa fa-times mr-2"></i>Set Inactive
+                                                        </button>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Ahmad Permadi</td>
-                                                    <td>ahmad.permadi@mail.com</td>
-                                                    <td>Vendor</td>
+                                                    <td>Reza Rahardian</td>
+                                                    <td>reza.rahardian@mail.com</td>
+                                                    <td>COUPA Admin</td>
                                                     <td>Jawa</td>
+                                                    <td><span class="badge badge-danger">INACTIVE</span></td>
                                                     <td>
                                                         <button type="button" class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target=".modal-edit-user">
                                                             <i class="fa fa-pen mr-2"></i>Edit
+                                                        </button>
+                                                        <button type="button" class="btn btn-outline-success btn-sm w-120px">
+                                                            <i class="fa fa-check mr-2"></i>Set Active
                                                         </button>
                                                     </td>
                                                 </tr>

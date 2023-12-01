@@ -157,91 +157,173 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                     <div class="tab-pane fade show active" id="tab-home" role="tabpanel" aria-labelledby="home-tab">
 
                                         <div class="card-body">
+                                            <div class="alert alert-light alert-dismissible text-sm">
+                                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                                                <i class="fa fa-info-circle mr-2"></i>
+                                                You can still update this invoice details up to approval by WL1.
+                                            </div>
                                             <p class="text-primary"><b>VENDOR & INVOICE INFO</b></p>
-                                            <div class="form-group form-inline">
-                                                <label class="col-sm-3 px-0">Ticket Number</label>
-                                                <input type="text" class="form-control col-md-9" value="TCK123" disabled>
+                                            <div class="alert alert-light">
+                                                <div class="form-group form-inline">
+                                                    <label class="col-sm-2 px-0">Ticket Number</label>
+                                                    <div class="col-md-10 px-0">TCK123</div>
+                                                </div>
+                                                <div class="form-group form-inline">
+                                                    <label class="col-sm-2 px-0">Vendor</label>
+                                                    <div class="col-md-10 px-0">Linfox</div>
+                                                </div>
+                                                <div class="form-group form-inline mb-0">
+                                                    <label class="col-sm-2 px-0">Current Status</label>
+                                                    <div class="col-md-10 px-0"><span class="badge badge-warning">OPEN TICKET</span></div>
+                                                </div>
                                             </div>
-                                            <div class="form-group form-inline">
-                                                <label class="col-sm-3 px-0">Current Status</label>
-                                                <div class="col-md-9 px-0"><span class="badge badge-warning">OPEN TICKET</span></div>
-                                            </div>
-                                            <div class="form-group form-inline">
-                                                <label class="col-md-3 px-0">Vendor</label>
-                                                <select class="form-control col-md-9" disabled>
-                                                    <option>Linfox</option>
-                                                </select>
-                                            </div>
-                                            <div class="form-group form-inline">
-                                                <label class="col-md-3 px-0">Transactions<span class="text-red ml-1">*</span></label>
-                                                <select class="form-control col-md-9" disabled>
-                                                    <option>Additional MHE</option>
-                                                </select>
-                                            </div>
-                                            <div class="form-group form-inline">
-                                                <label class="col-md-3 px-0">Details<span class="text-red ml-1">*</span></label>
-                                                <select class="form-control col-md-9" disabled>
-                                                    <option>Festive</option>
-                                                </select>
-                                            </div>
-                                            <div class="form-group form-inline">
-                                                <label class="col-md-3 px-0">Plant<span class="text-red ml-1">*</span></label>
-                                                <select class="form-control col-md-9" disabled>
-                                                    <option>1950</option>
-                                                </select>
-                                            </div>
-                                            <div class="form-group form-inline">
-                                                <label class="col-sm-3 px-0">Remarks</label>
-                                                <input type="text" class="form-control col-md-9" value="MHE Additional for Festive" disabled>
-                                            </div>
-                                            <p class="text-primary mt-4"><b>TRANSACTION INFO & PROCESS OUTPUT</b></p>
-                                            <div class="table-responsive">
-                                                <table class="table table-hover text-wrap">
-                                                    <thead class="bg-light">
-                                                        <tr>
-                                                            <th>Period</th>
-                                                            <th>Transaction</th>
-                                                            <th>Budget Amount (IDR)</th>
-                                                            <th>No. PR</th>
-                                                            <th>No. PO</th>
-                                                            <th>No. RC</th>
-                                                            <th>No. Matdoc</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>
-                                                                <select class="form-control" disabled>
-                                                                    <option>Jan 2023 - Mar 2023</option>
-                                                                </select>
-                                                            </td>
-                                                            <td>
-                                                                <select class="form-control" disabled>
-                                                                    <option>Additional MHE</option>
-                                                                </select>
-                                                            </td>
-                                                            <td><input type="text" class="form-control number-separator" value="10000000" disabled /></td>
-                                                            <td><input class="form-control" placeholder="No. PR" /></td>
-                                                            <td><input class="form-control" placeholder="No. PO" /></td>
-                                                            <td><input class="form-control" placeholder="No. RC" /></td>
-                                                            <td><input class="form-control" placeholder="No. Matdoc" /></td>
-                                                        </tr>
 
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                            <p class="text-primary mt-1"><b>RELATED FILE DOWNLOAD</b></p>
-                                            <div class="form-group form-inline">
-                                                <label class="col-sm-3 px-0">Proforma Invoice</label>
-                                                <div class="col-sm-9 px-0">
-                                                    <button class="btn btn-default btn-sm"><i class="fa fa-download mr-2"></i>Download Document</button>
+                                            <p class="text-primary"><b>TRANSACTION INFO & PROCESS OUTPUT</b></p>
+                                            <div>
+                                                <div class="table-responsive table-bordered">
+                                                    <table class="table text-wrap mb-0">
+                                                        <tbody>
+                                                            <tr class="bg-light">
+                                                                <td>
+                                                                    <div class="d-inline-block">
+                                                                        <h5 class="mb-1">Additional MHE</h5>
+                                                                        <div class="text-normal">Detail: Festive</div>
+                                                                    </div>
+                                                                    <h4 class="float-right mt-10px">Rp 5.000.000</h4>
+                                                                </td>
+                                                                <td rowspan="2" width="25%">
+                                                                    <div class="form-group form-inline">
+                                                                        <label class="col-4 px-0">No. PR </label>
+                                                                        <input class="form-control col-8" placeholder="No. PR" />
+                                                                    </div>
+                                                                    <div class="form-group form-inline">
+                                                                        <label class="col-4 px-0">No. PO </label>
+                                                                        <input class="form-control col-8" placeholder="No. PO" />
+                                                                    </div>
+                                                                    <div class="form-group form-inline">
+                                                                        <label class="col-4 px-0">No. RC </label>
+                                                                        <input class="form-control col-8" placeholder="No. RC" />
+                                                                    </div>
+                                                                    <div class="form-group form-inline mb-0">
+                                                                        <label class="col-4 px-0">No. Matdoc </label>
+                                                                        <input class="form-control col-8" placeholder="No. Matdoc" />
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="align-top">
+                                                                <td>
+                                                                    <div class="row">
+                                                                        <div class="col-5">
+                                                                            <div><b>Plant: </b>-</div>
+                                                                            <div><b>Remarks: </b>MHE Additional for Festive</div>
+                                                                            <div><b>No. Proforma Invoice: </b>INV12345</div>
+                                                                            <div><b>Period: </b>Jan 2023 - Mar 2023</div>
+                                                                            <!--Tidak bisa edit selain vendor-->
+                                                                            <!--<button type="button" class="btn btn-default mt-3" data-toggle="modal" data-target=".modal-add-trWarehouse">
+                                                                                <i class="fa fa-pen mr-2"></i>Edit Transaction
+                                                                            </button>-->
+                                                                        </div>
+                                                                        <div class="col-4">
+                                                                            <div><b>Proforma Invoice</b></div>
+                                                                            <a href="">
+                                                                                <i class="fa fa-download mr-2"></i>Proforma Invoice File.docx
+                                                                            </a>
+                                                                            <br>
+                                                                            <a href="">
+                                                                                <i class="fa fa-download mr-2"></i>Proforma Invoice File.docx
+                                                                            </a>
+                                                                        </div>
+                                                                        <div class="col-3">
+                                                                            <div><b>Additional Documents</b></div>
+                                                                            <a href="">
+                                                                                <i class="fa fa-download mr-2"></i>Additional File.docx
+                                                                            </a>
+                                                                            <br>
+                                                                            <a href="">
+                                                                                <i class="fa fa-download mr-2"></i>Additional File.docx
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+
+                                                            <!--New transaction row-->
+
+                                                            <tr class="bg-light">
+                                                                <td>
+                                                                    <div class="d-inline-block">
+                                                                        <h5 class="mb-1">Additional MHE</h5>
+                                                                        <div class="text-normal">Detail: Festive</div>
+                                                                    </div>
+                                                                    <h4 class="float-right mt-10px">Rp 5.000.000</h4>
+                                                                </td>
+                                                                <td rowspan="2" width="25%">
+                                                                    <div class="form-group form-inline">
+                                                                        <label class="col-4 px-0">No. PR </label>
+                                                                        <input class="form-control col-8" placeholder="No. PR" />
+                                                                    </div>
+                                                                    <div class="form-group form-inline">
+                                                                        <label class="col-4 px-0">No. PO </label>
+                                                                        <input class="form-control col-8" placeholder="No. PO" />
+                                                                    </div>
+                                                                    <div class="form-group form-inline">
+                                                                        <label class="col-4 px-0">No. RC </label>
+                                                                        <input class="form-control col-8" placeholder="No. RC" />
+                                                                    </div>
+                                                                    <div class="form-group form-inline mb-0">
+                                                                        <label class="col-4 px-0">No. Matdoc </label>
+                                                                        <input class="form-control col-8" placeholder="No. Matdoc" />
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="align-top">
+                                                                <td>
+                                                                    <div class="row">
+                                                                        <div class="col-5">
+                                                                            <div><b>Plant: </b>-</div>
+                                                                            <div><b>Remarks: </b>MHE Additional for Festive</div>
+                                                                            <div><b>No. Proforma Invoice: </b>INV12345</div>
+                                                                            <div><b>Period: </b>Jan 2023 - Mar 2023</div>
+                                                                            <!--Tidak bisa edit selain vendor-->
+                                                                            <!--<button type="button" class="btn btn-default mt-3" data-toggle="modal" data-target=".modal-add-trWarehouse">
+                                                                                <i class="fa fa-pen mr-2"></i>Edit Transaction
+                                                                            </button>-->
+                                                                        </div>
+                                                                        <div class="col-4">
+                                                                            <div><b>Proforma Invoice</b></div>
+                                                                            <a href="">
+                                                                                <i class="fa fa-download mr-2"></i>Proforma Invoice File.docx
+                                                                            </a>
+                                                                            <br>
+                                                                            <a href="">
+                                                                                <i class="fa fa-download mr-2"></i>Proforma Invoice File.docx
+                                                                            </a>
+                                                                        </div>
+                                                                        <div class="col-3">
+                                                                            <div><b>Additional Documents</b></div>
+                                                                            <a href="">
+                                                                                <i class="fa fa-download mr-2"></i>Additional File.docx
+                                                                            </a>
+                                                                            <br>
+                                                                            <a href="">
+                                                                                <i class="fa fa-download mr-2"></i>Additional File.docx
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+
+                                                            <tr class="bg-default-dark">
+                                                                <td>
+                                                                    <h5 class="mb-0 float-left mt-2px"><b>Total Amount</b></h5>
+                                                                    <h4 class="mb-0 float-right"><b>Rp 10.000.000</b></h4>
+                                                                </td>
+                                                                <td></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
                                                 </div>
-                                            </div>
-                                            <div class="form-group form-inline">
-                                                <label class="col-sm-3 px-0">Additional Document</label>
-                                                <div class="col-sm-9 px-0">
-                                                    <button class="btn btn-default btn-sm"><i class="fa fa-download mr-2"></i>Download Document</button>
-                                                </div>
+
                                             </div>
                                         </div>
                                         <div class="card-footer">
