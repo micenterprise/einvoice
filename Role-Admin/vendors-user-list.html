@@ -117,13 +117,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="vendors.html" class="nav-link">
+                            <a href="vendors.html" class="nav-link active">
                                 <i class="nav-icon fas fa-store"></i>
                                 <p>Vendors</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="users.html" class="nav-link active">
+                            <a href="users.html" class="nav-link">
                                 <i class="fa fa-users nav-icon"></i>
                                 <p>Users</p>
                             </a>
@@ -166,12 +166,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0">Users</h1>
+                            <a href="vendors.html" class="btn btn-default btn-sm">
+                                <i class="fa fa-angle-left mr-2"></i>Back to Previous
+                            </a>
+                            <div class="h4 page-header-btn">| Vendor User List</div>
                         </div><!-- /.col -->
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                <li class="breadcrumb-item active">Users</li>
+                                <li class="breadcrumb-item"><a href="vendors.html">Vendors</a></li>
+                                <li class="breadcrumb-item active">User List</li>
                             </ol>
                         </div><!-- /.col -->
                     </div><!-- /.row -->
@@ -184,113 +188,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <div class="row">
                         <!-- left column -->
                         <div class="col-md-12">
-                            <div class="card card-primary card-tabs">
-                                <div class="card-header p-0 pt-1">
-                                    <ul class="nav nav-tabs">
-                                        <li class="nav-item">
-                                            <a class="nav-link active" href="users.html">USERS LIST</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="users-wl-mapping.html">WL MAPPING</a>
-                                        </li>
-                                    </ul>
+                            <div class="card card-primary">
+                                <div class="card-header">
+                                    <h3 class="card-title">Vendor: Linfox</h3>
                                 </div>
                                 <div class="card-body">
-                                    <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target=".modal-add-user">
-                                        <i class="fa fa-plus mr-2"></i>Add New User
-                                    </button>
-
-                                    <div class="modal fade modal-add-user" tabindex="-1" role="dialog" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title">Add New User</h5>
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                        <span aria-hidden="true">&times;</span>
-                                                    </button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <div class="form-group">
-                                                        <label>Name</label>
-                                                        <input type="text" class="form-control" />
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label>Email</label>
-                                                        <input type="email" class="form-control" />
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label>Role</label>
-                                                        <select class="form-control">
-                                                            <option selected disabled>Please select</option>
-                                                            <option>Vendor</option>
-                                                            <option>Logistic (WL1)</option>
-                                                            <option>Logistic (WL2)</option>
-                                                            <option>COUPA Admin</option>
-                                                            <option>SCF</option>
-                                                            <option>Administrator</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label>Plant</label>
-                                                        <select class="select2" multiple="multiple" data-placeholder="Please select" style="width: 100%;">
-                                                            <option>9000 - NSD BOF</option>
-                                                            <option>9001 - Food LION</option>
-                                                            <option>9001 - SCC&C BOF</option>
-                                                            <option>9001 - TBB BOF</option>
-                                                            <option>9002 - IC BOF LOCAL</option>
-                                                            <option>9002 - Seru BoF IC</option>
-                                                            <option>9003 - SKIN BOF LOCAL</option>
-                                                            <option>9004 - PC BOF</option>
-                                                            <option>9004 - PW BOF</option>
-                                                            <option>9005 - Bango BOF</option>
-                                                            <option>9006 - CIK - SAVORY</option>
-                                                            <option>9011 - Sariwangi AEA BOF</option>
-                                                            <option>9012 - RSE-SDL SURABAYA</option>
-                                                            <option>9014 - HARAPAN BOF</option>
-                                                            <option>9016 - RSE - IC BOF</option>
-                                                            <option>9104 - DC IC BJM</option>
-                                                            <option>9104 - DC IC Medan</option>
-                                                            <option>9104 - DC IC SBY Dakai</option>
-                                                            <option>9105 - DC NGORO</option>
-                                                            <option>9106 - Mini DC Sampit</option>
-                                                            <option>9107 - MUF2</option>
-                                                            <option>9108 - KA Cold Store</option>
-                                                            <option>9110 - LIQ - HAIR BOF</option>
-                                                            <option>9111 - DC IC MKS</option>
-                                                            <option>9114 - DC IC SBY ITJ</option>
-                                                            <option>9114 - Seru SBY</option>
-                                                            <option>9120 - CDC 06 SURABAYA</option>
-                                                            <option>9120 - WARU SBY</option>
-                                                            <option>9121 - SERU WCS</option>
-                                                            <option>9121 - West Cold Store</option>
-                                                            <option>9150 - MDC WEST</option>
-                                                            <option>9154 - DC RSE UI Jakarta</option>
-                                                            <option>9200 - DC PADANG</option>
-                                                            <option>9201 - DC PEKAN BARU</option>
-                                                            <option>9202 - DC PALEMBANG</option>
-                                                            <option>9203 - DC PONTIANAK</option>
-                                                            <option>9204 - DC BANJARMASIN</option>
-                                                            <option>9205 - DC SAMARINDA</option>
-                                                            <option>9206 - DC MANADO</option>
-                                                            <option>9207 - DC MAKASAR</option>
-                                                            <option>9208 - DC MEDAN</option>
-                                                            <option>9209 - DC MT DPS KMJ</option>
-                                                            <option>9210 - DC IC MEDAN</option>
-                                                            <option>9211 - Mitrapak BOF</option>
-                                                            <option>9212 - Mini DC Kendari</option>
-                                                            <option>9213 - Overflow Block AE</option>
-                                                            <option>9221 - RSE-SDL Jakarta</option>
-                                                            <option>9224 - Advantis OF</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                                                    <a href="" type="button" class="btn btn-primary">Save User</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
                                     <div class="row">
                                         <div class="col-md-3">
                                             <div class="form-group">
@@ -305,26 +207,108 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                 <i class="fas fa-redo"></i>
                                             </button>
                                         </div>
+                                        <div class="col-md-6">
+                                            
+                                            <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target=".modal-new-user">
+                                                <i class="fa fa-plus mr-2"></i>Add New User
+                                            </button>
+
+                                            <div class="modal fade modal-new-user" tabindex="-1" role="dialog" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title">Add Vendor User</h5>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <div class="form-group">
+                                                                <label>Name</label>
+                                                                <input type="text" class="form-control" />
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label>Email</label>
+                                                                <input type="email" class="form-control" />
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label>Plant</label>
+                                                                <select class="select2" multiple="multiple" data-placeholder="Please select" style="width: 100%;">
+                                                                    <option>9000 - NSD BOF</option>
+                                                                    <option>9001 - Food LION</option>
+                                                                    <option>9001 - SCC&C BOF</option>
+                                                                    <option>9001 - TBB BOF</option>
+                                                                    <option>9002 - IC BOF LOCAL</option>
+                                                                    <option>9002 - Seru BoF IC</option>
+                                                                    <option>9003 - SKIN BOF LOCAL</option>
+                                                                    <option>9004 - PC BOF</option>
+                                                                    <option>9004 - PW BOF</option>
+                                                                    <option>9005 - Bango BOF</option>
+                                                                    <option>9006 - CIK - SAVORY</option>
+                                                                    <option>9011 - Sariwangi AEA BOF</option>
+                                                                    <option>9012 - RSE-SDL SURABAYA</option>
+                                                                    <option>9014 - HARAPAN BOF</option>
+                                                                    <option>9016 - RSE - IC BOF</option>
+                                                                    <option>9104 - DC IC BJM</option>
+                                                                    <option>9104 - DC IC Medan</option>
+                                                                    <option>9104 - DC IC SBY Dakai</option>
+                                                                    <option>9105 - DC NGORO</option>
+                                                                    <option>9106 - Mini DC Sampit</option>
+                                                                    <option>9107 - MUF2</option>
+                                                                    <option>9108 - KA Cold Store</option>
+                                                                    <option>9110 - LIQ - HAIR BOF</option>
+                                                                    <option>9111 - DC IC MKS</option>
+                                                                    <option>9114 - DC IC SBY ITJ</option>
+                                                                    <option>9114 - Seru SBY</option>
+                                                                    <option>9120 - CDC 06 SURABAYA</option>
+                                                                    <option>9120 - WARU SBY</option>
+                                                                    <option>9121 - SERU WCS</option>
+                                                                    <option>9121 - West Cold Store</option>
+                                                                    <option>9150 - MDC WEST</option>
+                                                                    <option>9154 - DC RSE UI Jakarta</option>
+                                                                    <option>9200 - DC PADANG</option>
+                                                                    <option>9201 - DC PEKAN BARU</option>
+                                                                    <option>9202 - DC PALEMBANG</option>
+                                                                    <option>9203 - DC PONTIANAK</option>
+                                                                    <option>9204 - DC BANJARMASIN</option>
+                                                                    <option>9205 - DC SAMARINDA</option>
+                                                                    <option>9206 - DC MANADO</option>
+                                                                    <option>9207 - DC MAKASAR</option>
+                                                                    <option>9208 - DC MEDAN</option>
+                                                                    <option>9209 - DC MT DPS KMJ</option>
+                                                                    <option>9210 - DC IC MEDAN</option>
+                                                                    <option>9211 - Mitrapak BOF</option>
+                                                                    <option>9212 - Mini DC Kendari</option>
+                                                                    <option>9213 - Overflow Block AE</option>
+                                                                    <option>9221 - RSE-SDL Jakarta</option>
+                                                                    <option>9224 - Advantis OF</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                                            <a href="" type="button" class="btn btn-primary">Save User</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="table-responsive">
                                         <table class="table table-hover">
                                             <thead class="bg-light">
                                                 <tr>
-                                                    <th>No</th>
                                                     <th>Name</th>
                                                     <th>Email</th>
-                                                    <th>Role</th>
                                                     <th>Plant</th>
-                                                    <th>Status</th>
+                                                    <th>Status</th>                                                    
                                                     <th width="210">Action</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td>1</td>
-                                                    <td>Jaya Wijaya</td>
-                                                    <td>jaya.wijaya@unilever.com</td>
-                                                    <td>Administrator</td>
+                                                    <td>Bunga Citra</td>
+                                                    <td>bunga.citra@mail.com</td>
                                                     <td>
                                                         9000 - NSD BOF <br />
                                                         9001 - SCC&C BOF
@@ -334,11 +318,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                         <button type="button" class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target=".modal-edit-user">
                                                             <i class="fa fa-pen mr-2"></i>Edit
                                                         </button>
+                                                        <button type="button" class="btn btn-outline-danger btn-sm w-120px">
+                                                            <i class="fa fa-times mr-2"></i>Set Inactive
+                                                        </button>
                                                         <div class="modal fade modal-edit-user" tabindex="-1" role="dialog" aria-hidden="true">
                                                             <div class="modal-dialog">
                                                                 <div class="modal-content">
                                                                     <div class="modal-header">
-                                                                        <h5 class="modal-title">Edit User's Data</h5>
+                                                                        <h5 class="modal-title">Add Vendor User</h5>
                                                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                                             <span aria-hidden="true">&times;</span>
                                                                         </button>
@@ -346,22 +333,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                                     <div class="modal-body">
                                                                         <div class="form-group">
                                                                             <label>Name</label>
-                                                                            <input type="text" class="form-control" value="Jaya Wijaya" />
+                                                                            <input type="text" class="form-control" />
                                                                         </div>
                                                                         <div class="form-group">
                                                                             <label>Email</label>
-                                                                            <input type="email" class="form-control" disabled value="jaya.wijaya@unilever.com" />
-                                                                        </div>
-                                                                        <div class="form-group">
-                                                                            <label>Role</label>
-                                                                            <select class="form-control">
-                                                                                <option selected disabled>Please select</option>
-                                                                                <option>Logistic (WL1)</option>
-                                                                                <option>Logistic (WL2)</option>
-                                                                                <option>COUPA Admin</option>
-                                                                                <option>SCF</option>
-                                                                                <option selected>Administrator</option>
-                                                                            </select>
+                                                                            <input type="email" class="form-control" />
                                                                         </div>
                                                                         <div class="form-group">
                                                                             <label>Plant</label>
@@ -424,18 +400,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                                 </div>
                                                             </div>
                                                         </div>
-
-                                                        <button type="button" class="btn btn-outline-danger btn-sm w-120px">
-                                                            <i class="fa fa-times mr-2"></i>Set Inactive
-                                                        </button>
                                                     </td>
                                                 </tr>
+                                                
                                                 <tr>
-                                                    <td>2</td>
-                                                    <td>Reza Rahardian</td>
-                                                    <td>reza.rahardian@mail.com</td>
-                                                    <td>COUPA Admin</td>
-                                                    <td>9000 - NSD BOF</td>
+                                                    <td>Jessica Mila</td>
+                                                    <td>jessica.mila@mail.com</td>
+                                                    <td>9110 - LIQ-HAIR</td>
                                                     <td><span class="badge badge-danger">INACTIVE</span></td>
                                                     <td>
                                                         <button type="button" class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target=".modal-edit-user">
@@ -446,7 +417,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                         </button>
                                                     </td>
                                                 </tr>
-
                                             </tbody>
                                         </table>
                                     </div>
@@ -458,7 +428,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                         <li class="page-item"><a class="page-link" href="#">»</a></li>
                                     </ul>
                                 </div>
-                                <!-- /.card-body -->
 
                             </div>
 

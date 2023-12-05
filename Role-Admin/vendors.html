@@ -111,6 +111,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </li>
                         <li class="nav-header">MASTER DATA</li>
                         <li class="nav-item">
+                            <a href="plants.html" class="nav-link">
+                                <i class="fas fas fa-building nav-icon"></i>
+                                <p>Plants</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a href="vendors.html" class="nav-link active">
                                 <i class="nav-icon fas fa-store"></i>
                                 <p>Vendors</p>
@@ -123,15 +129,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="po.html" class="nav-link">
-                                <i class="fas fa-file-invoice nav-icon"></i>
-                                <p>PO Log</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="po-tracking.html" class="nav-link">
-                                <i class="fas fa-search nav-icon"></i>
-                                <p>PO Tracking</p>
+                            <a href="transactions.html" class="nav-link">
+                                <i class="fas fa-money-check-alt nav-icon"></i>
+                                <p>Transactions</p>
                             </a>
                         </li>
                         <li class="nav-item">
@@ -141,15 +141,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="transactions.html" class="nav-link">
-                                <i class="fas fa-money-check-alt nav-icon"></i>
-                                <p>Transactions</p>
+                            <a href="po.html" class="nav-link">
+                                <i class="fas fa-file-invoice nav-icon"></i>
+                                <p>PO Log</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="area.html" class="nav-link">
-                                <i class="fas fa-map-marker-alt nav-icon"></i>
-                                <p>Area</p>
+                            <a href="po-tracking.html" class="nav-link">
+                                <i class="fas fa-search nav-icon"></i>
+                                <p>PO Tracking</p>
                             </a>
                         </li>
                     </ul>
@@ -205,35 +205,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                         <label>Vendor Name</label>
                                                         <input type="text" class="form-control" />
                                                     </div>
-                                                    <div class="form-group">
-                                                        <label>Vendor Email</label>
-                                                        <input type="email" class="form-control" />
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label>Area</label>
-                                                        <div class="row px-2">
-                                                            <div class="custom-control custom-checkbox col-md-4">
-                                                                <input class="custom-control-input" type="checkbox" id="customCheckbox1" value="option1">
-                                                                <label for="customCheckbox1" class="custom-control-label font-weight-normal">Jawa</label>
-                                                            </div>
-                                                            <div class="custom-control custom-checkbox col-md-4">
-                                                                <input class="custom-control-input" type="checkbox" id="customCheckbox2" value="option2">
-                                                                <label for="customCheckbox2" class="custom-control-label font-weight-normal">Sumatera</label>
-                                                            </div>
-                                                            <div class="custom-control custom-checkbox col-md-4">
-                                                                <input class="custom-control-input" type="checkbox" id="customCheckbox3" value="option3">
-                                                                <label for="customCheckbox3" class="custom-control-label font-weight-normal">Bali</label>
-                                                            </div>
-                                                            <div class="custom-control custom-checkbox col-md-4">
-                                                                <input class="custom-control-input" type="checkbox" id="customCheckbox4" value="option4">
-                                                                <label for="customCheckbox4" class="custom-control-label font-weight-normal">Kalimantan</label>
-                                                            </div>
-                                                            <div class="custom-control custom-checkbox col-md-4">
-                                                                <input class="custom-control-input" type="checkbox" id="customCheckbox5" value="option5">
-                                                                <label for="customCheckbox5" class="custom-control-label font-weight-normal">OI</label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                                    
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
@@ -261,86 +233,31 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                         <table class="table table-hover">
                                             <thead class="bg-light">
                                                 <tr>
+                                                    <th>No</th>
                                                     <th>Vendor</th>
-                                                    <th>Email</th>
-                                                    <th>Area</th>
-                                                    <th width="175">Action</th>
+                                                    <th width="210">Action</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
+                                                    <td>1</td>
                                                     <td>Linfox</td>
-                                                    <td>linfox@mail.com</td>
-                                                    <td>Jawa, Bali</td>
                                                     <td>
-                                                        <button type="button" class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target=".modal-edit-vendor">
-                                                            <i class="fa fa-pen mr-2"></i>Edit
-                                                        </button>
-
+                                                        <a href="vendors-user-list.html" class="btn btn-outline-primary btn-sm">
+                                                            <i class="fas fa-users mr-2"></i>User List
+                                                        </a>
                                                         <a href="vendors-po-list.html" class="btn btn-outline-primary btn-sm">
                                                             <i class="fa fa-search mr-2"></i>PO List
                                                         </a>
-                                                        <div class="modal fade modal-edit-vendor" tabindex="-1" role="dialog" aria-hidden="true">
-                                                            <div class="modal-dialog">
-                                                                <div class="modal-content">
-                                                                    <div class="modal-header">
-                                                                        <h5 class="modal-title">Edit Vendor's Data</h5>
-                                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                                            <span aria-hidden="true">&times;</span>
-                                                                        </button>
-                                                                    </div>
-                                                                    <div class="modal-body">
-                                                                        <div class="form-group">
-                                                                            <label>Vendor Name</label>
-                                                                            <input type="text" class="form-control" value="Linfox" />
-                                                                        </div>
-                                                                        <div class="form-group">
-                                                                            <label>Vendor Email</label>
-                                                                            <input type="email" class="form-control" value="linfox@mail.com" disabled />
-                                                                        </div>
-                                                                        <div class="form-group">
-                                                                            <label>Area</label>
-                                                                            <div class="row px-2">
-                                                                                <div class="custom-control custom-checkbox col-md-4">
-                                                                                    <input class="custom-control-input" type="checkbox" id="customCheckbox1" value="option1" checked>
-                                                                                    <label for="customCheckbox1" class="custom-control-label font-weight-normal">Jawa</label>
-                                                                                </div>
-                                                                                <div class="custom-control custom-checkbox col-md-4">
-                                                                                    <input class="custom-control-input" type="checkbox" id="customCheckbox2" value="option2">
-                                                                                    <label for="customCheckbox2" class="custom-control-label font-weight-normal">Sumatera</label>
-                                                                                </div>
-                                                                                <div class="custom-control custom-checkbox col-md-4">
-                                                                                    <input class="custom-control-input" type="checkbox" id="customCheckbox3" value="option3" checked>
-                                                                                    <label for="customCheckbox3" class="custom-control-label font-weight-normal">Bali</label>
-                                                                                </div>
-                                                                                <div class="custom-control custom-checkbox col-md-4">
-                                                                                    <input class="custom-control-input" type="checkbox" id="customCheckbox4" value="option4">
-                                                                                    <label for="customCheckbox4" class="custom-control-label font-weight-normal">Kalimantan</label>
-                                                                                </div>
-                                                                                <div class="custom-control custom-checkbox col-md-4">
-                                                                                    <input class="custom-control-input" type="checkbox" id="customCheckbox5" value="option5">
-                                                                                    <label for="customCheckbox5" class="custom-control-label font-weight-normal">OI</label>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="modal-footer">
-                                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                                                                        <a href="" type="button" class="btn btn-primary">Save Changes</a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
+                                                    <td>2</td>
                                                     <td>MIC Enterprise</td>
-                                                    <td>mic.enterprise@mail.com</td>
-                                                    <td>Jawa</td>
                                                     <td>
-                                                        <button type="button" class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target=".modal-edit-vendor">
-                                                            <i class="fa fa-pen mr-2"></i>Edit
-                                                        </button>
+                                                        <a href="vendors-user-list.html" class="btn btn-outline-primary btn-sm">
+                                                            <i class="fas fa-users mr-2"></i>User List
+                                                        </a>
                                                         <a href="vendors-po-list.html" class="btn btn-outline-primary btn-sm">
                                                             <i class="fa fa-search mr-2"></i>PO List
                                                         </a>

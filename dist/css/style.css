@@ -8179,7 +8179,9 @@ button.bg-dark:focus {
 .shadow-none {
   box-shadow: none !important;
 }
-
+.fs-13 {
+    font-size: 13px !important;
+}
 .w-25 {
   width: 25% !important;
 }

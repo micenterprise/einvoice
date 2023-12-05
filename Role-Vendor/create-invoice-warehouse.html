@@ -160,7 +160,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                         <tr class="bg-light">
                                                             <th>
                                                                 <h5 class="mb-1">Additional MHE</h5>
-                                                                <div class="text-normal">Transaction Detail</div>
+                                                                <div class="text-normal">Festive</div>
                                                             </th>
                                                             <th colspan="4" class="text-right">
                                                                 <h4 class="mb-0">Rp 5.000.000</h4>
@@ -168,12 +168,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <div><b>Plant: </b>-</div>
+                                                                <div><b>Plant: </b>9001 - SCC&C BOF</div>
                                                                 <div><b>Remarks: </b>MHE Additional for Festive</div>
                                                             </td>
                                                             <td>
                                                                 <div><b>No. Proforma Invoice: </b>INV12345</div>
-                                                                <div><b>Period: </b>Jan 2023 - Mar 2023</div>
+                                                                <div><b>Period: </b>04/12/23 - 04/03/23</div>
                                                             </td>
                                                             <td>
                                                                 <div><b>Proforma Invoice</b></div>
@@ -204,7 +204,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                         <tr class="bg-light">
                                                             <th>
                                                                 <h5 class="mb-1">Additional MHE</h5>
-                                                                <div class="text-normal">Transaction Detail</div>
+                                                                <div class="text-normal">MHE Ramp Up</div>
                                                             </th>
                                                             <th colspan="4" class="text-right">
                                                                 <h4 class="mb-0">Rp 5.000.000</h4>
@@ -212,12 +212,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <div><b>Plant: </b>-</div>
+                                                                <div><b>Plant: </b>9001 - SCC&C BOF</div>
                                                                 <div><b>Remarks: </b>MHE Additional for Festive</div>
                                                             </td>
                                                             <td>
                                                                 <div><b>No. Proforma Invoice: </b>INV12345</div>
-                                                                <div><b>Period: </b>Jan 2023 - Mar 2023</div>
+                                                                <div><b>Period: </b>04/12/23 - 04/03/23</div>
                                                             </td>
                                                             <td>
                                                                 <div><b>Proforma Invoice</b></div>
@@ -272,21 +272,31 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                         </div>
                                                         <div class="modal-body">
                                                             <div class="form-group form-inline">
-                                                                <label class="col-md-3 px-0">Transactions<span class="text-red ml-1">*</span></label>
+                                                                <label class="col-md-3 px-0">Transaction<span class="text-red ml-1">*</span></label>
                                                                 <select class="form-control col-md-9">
                                                                     <option>Please select</option>
+                                                                    <option>Additional MHE</option>
+                                                                    <option>Overtime People</option>
+                                                                    <option>Others</option>
                                                                 </select>
                                                             </div>
                                                             <div class="form-group form-inline">
-                                                                <label class="col-md-3 px-0">Details<span class="text-red ml-1">*</span></label>
+                                                                <label class="col-md-3 px-0">Detail<span class="text-red ml-1">*</span></label>
                                                                 <select class="form-control col-md-9">
                                                                     <option>Please select</option>
+                                                                    <option>Festive</option>
+                                                                    <option>MHE Ramp Up</option>
+                                                                    <option>MHE Increase</option>
                                                                 </select>
                                                             </div>
                                                             <div class="form-group form-inline">
                                                                 <label class="col-md-3 px-0">Plant<span class="text-red ml-1">*</span></label>
-                                                                <select class="form-control col-md-9">
+                                                                <select class="form-control col-md-9" disabled>
                                                                     <option>Please select</option>
+                                                                    <option selected>9000 - NSD BOF</option>
+                                                                    <option>9001 - Food LION</option>
+                                                                    <option>9001 - SCC&C BOF</option>
+                                                                    <option>9001 - TBB BOF</option>
                                                                 </select>
                                                             </div>
                                                             <div class="form-group form-inline">
@@ -295,12 +305,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                             </div>
                                                             <div class="form-group form-inline">
                                                                 <label class="col-md-3 px-0">Period<span class="text-red ml-1">*</span></label>
-                                                                <select class="form-control col-md-9">
-                                                                    <option>Please select</option>
-                                                                </select>
+                                                                <input type="date" class="form-control col-md-9">
                                                             </div>
                                                             <div class="form-group form-inline">
-                                                                <label class="col-md-3 px-0">Invoice Amount<span class="text-red ml-1">*</span></label>
+                                                                <label class="col-md-3 px-0">Invoice Amount (Rp)<span class="text-red ml-1">*</span></label>
                                                                 <input type="text" class="form-control col-md-9 number-separator">
                                                             </div>
                                                             <div class="form-group form-inline">

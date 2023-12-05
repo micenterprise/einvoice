@@ -167,7 +167,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                             <div class="alert alert-light">
                                                 <div class="form-group form-inline">
                                                     <label class="col-sm-2 px-0">Ticket Number</label>
-                                                    <div class="col-md-10 px-0">TCK123</div>
+                                                    <div class="col-md-10 px-0">QRIS041223-001</div>
                                                 </div>
                                                 <div class="form-group form-inline">
                                                     <label class="col-sm-2 px-0">Vendor</label>
@@ -323,10 +323,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                     </table>
                                                 </div>
 
-                                                <button type="button" class="btn btn-success mt-3" data-toggle="modal" data-target=".modal-add-trWarehouse">
-                                                    <i class="fa fa-plus mr-2"></i>Add Transaction
-                                                </button>
-
                                                 <div class="modal fade modal-add-trWarehouse" tabindex="-1" style="display: none;" aria-hidden="true">
                                                     <div class="modal-dialog modal-lg">
                                                         <div class="modal-content">
@@ -338,21 +334,31 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                             </div>
                                                             <div class="modal-body">
                                                                 <div class="form-group form-inline">
-                                                                    <label class="col-md-3 px-0">Transactions<span class="text-red ml-1">*</span></label>
+                                                                    <label class="col-md-3 px-0">Transaction<span class="text-red ml-1">*</span></label>
                                                                     <select class="form-control col-md-9">
                                                                         <option>Please select</option>
+                                                                        <option>Additional MHE</option>
+                                                                        <option>Overtime People</option>
+                                                                        <option>Others</option>
                                                                     </select>
                                                                 </div>
                                                                 <div class="form-group form-inline">
-                                                                    <label class="col-md-3 px-0">Details<span class="text-red ml-1">*</span></label>
+                                                                    <label class="col-md-3 px-0">Detail<span class="text-red ml-1">*</span></label>
                                                                     <select class="form-control col-md-9">
                                                                         <option>Please select</option>
+                                                                        <option>Festive</option>
+                                                                        <option>MHE Ramp Up</option>
+                                                                        <option>MHE Increase</option>
                                                                     </select>
                                                                 </div>
                                                                 <div class="form-group form-inline">
                                                                     <label class="col-md-3 px-0">Plant<span class="text-red ml-1">*</span></label>
-                                                                    <select class="form-control col-md-9">
+                                                                    <select class="form-control col-md-9" disabled>
                                                                         <option>Please select</option>
+                                                                        <option selected>9000 - NSD BOF</option>
+                                                                        <option>9001 - Food LION</option>
+                                                                        <option>9001 - SCC&C BOF</option>
+                                                                        <option>9001 - TBB BOF</option>
                                                                     </select>
                                                                 </div>
                                                                 <div class="form-group form-inline">
@@ -361,12 +367,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                                 </div>
                                                                 <div class="form-group form-inline">
                                                                     <label class="col-md-3 px-0">Period<span class="text-red ml-1">*</span></label>
-                                                                    <select class="form-control col-md-9">
-                                                                        <option>Please select</option>
-                                                                    </select>
+                                                                    <input type="date" class="form-control col-md-9">
                                                                 </div>
                                                                 <div class="form-group form-inline">
-                                                                    <label class="col-md-3 px-0">Invoice Amount<span class="text-red ml-1">*</span></label>
+                                                                    <label class="col-md-3 px-0">Invoice Amount (Rp)<span class="text-red ml-1">*</span></label>
                                                                     <input type="text" class="form-control col-md-9 number-separator">
                                                                 </div>
                                                                 <div class="form-group form-inline">
